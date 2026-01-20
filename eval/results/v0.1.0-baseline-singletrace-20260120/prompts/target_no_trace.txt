@@ -1,0 +1,6 @@
+You will solve the task below.
+
+Return ONLY valid JSON with key: "final".
+
+Task:
+{{PROMPT}}

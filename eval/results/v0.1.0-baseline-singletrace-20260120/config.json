@@ -1,0 +1,14 @@
+{
+  "dataset": "eval/datasets/arithmetic-60.jsonl",
+  "proposer": {
+    "model": "sonnet",
+    "temperature": 0.0
+  },
+  "targets": [
+    {
+      "name": "haiku",
+      "model": "haiku",
+      "temperature": 0.0
+    }
+  ]
+}

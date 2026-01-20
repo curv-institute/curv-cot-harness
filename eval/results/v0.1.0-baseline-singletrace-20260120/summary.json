@@ -1,0 +1,41 @@
+{
+  "run_name": "v0.1.0-baseline-singletrace-20260120",
+  "dataset": "eval/datasets/arithmetic-60.jsonl",
+  "n_items": 60,
+  "git": {
+    "commit": "81d8a23928fa",
+    "tag": "81d8a23"
+  },
+  "proposer": {
+    "model": "sonnet",
+    "temperature": 0.0,
+    "accuracy": 1.0
+  },
+  "targets": [
+    {
+      "name": "haiku",
+      "model": "haiku"
+    }
+  ],
+  "agreement_rate": {
+    "with_trace": 0.0,
+    "no_trace": 0.0
+  },
+  "agree_all_counts": {
+    "agree_on_correct_with_trace": 60,
+    "agree_on_wrong_with_trace": 0,
+    "agree_on_correct_no_trace": 52,
+    "agree_on_wrong_no_trace": 8
+  },
+  "accuracy": {
+    "with_trace": {
+      "haiku": 1.0
+    },
+    "no_trace": {
+      "haiku": 0.8666666666666667
+    },
+    "transfer_gain": {
+      "haiku": 0.1333333333333333
+    }
+  }
+}

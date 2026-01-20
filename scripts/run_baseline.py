@@ -1,8 +1,19 @@
 #!/usr/bin/env -S uv run
 # /// script
 # requires-python = ">=3.12"
-# dependencies = []
+# dependencies = ["litellm>=1.0.0"]
 # ///
+"""
+Baseline Trace Transfer Experiment Runner (Experiment 001)
+
+Establishes baseline measurements for cross-model trace transfer:
+- Cross-model answer agreement
+- Agreement-on-correct
+- Agreement-on-wrong (consistent-wrong collapse)
+- Transfer gain: Δ accuracy when target model receives trace vs no-trace
+
+Uses litellm for unified API access to multiple model providers.
+"""
 
 from __future__ import annotations
 
@@ -12,15 +23,42 @@ import re
 import subprocess
 import sys
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+import litellm
+
 ROOT = Path(__file__).resolve().parents[1]
+
+# Disable litellm telemetry and reduce verbosity
+litellm.telemetry = False
+litellm.set_verbose = False
 
 
 def utc_ts_compact() -> str:
-    return datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+    return datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+
+def get_git_info() -> dict[str, str]:
+    """Get current git commit and tag info."""
+    try:
+        commit = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            capture_output=True, text=True, check=True
+        ).stdout.strip()[:12]
+    except Exception:
+        commit = "UNKNOWN"
+
+    try:
+        tag = subprocess.run(
+            ["git", "describe", "--tags", "--always"],
+            capture_output=True, text=True, check=True
+        ).stdout.strip()
+    except Exception:
+        tag = "UNKNOWN"
+
+    return {"commit": commit, "tag": tag}
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -42,6 +80,7 @@ def write_jsonl(path: Path, rows: Iterable[dict[str, Any]]) -> None:
 
 
 def normalize_answer(s: str) -> str:
+    """Normalize answer string for comparison."""
     s = s.strip()
     s = re.sub(r"\s+", " ", s)
     return s
@@ -49,66 +88,89 @@ def normalize_answer(s: str) -> str:
 
 @dataclass(frozen=True)
 class ModelSpec:
-    name: str               # logical name used in manifests
-    kind: str               # "claude" | "codex"
-    model: str              # model id passed to CLI
-    temperature: str = "0"
+    name: str       # logical name for manifests
+    model: str      # litellm model identifier (e.g., "claude-3-5-haiku-latest", "gpt-4.1-mini")
 
 
-def run_cli(kind: str, model: str, prompt: str, temperature: str = "0") -> str:
-    """Runs a model call through either Claude CLI or Codex CLI.
+def call_model(model: str, prompt: str, temperature: float = 0.0) -> str:
+    """Call a model and return the response text.
 
-    Claude CLI:
-    - Uses -p (print mode) for non-interactive single-response output
-    - Uses --model to select model
-    - Prompt passed via stdin
-    - No direct temperature control (uses default settings)
+    For Claude models: uses Claude CLI (which has built-in auth)
+    For other models: uses litellm (requires API keys in environment)
 
-    Codex CLI:
-    - Uses 'exec' subcommand for non-interactive mode
-    - Uses -m for model selection
-    - Uses -c temperature=<val> for temperature control
-    - Reads prompt from stdin when '-' is passed
+    Model identifiers:
+    - Claude CLI: "sonnet", "haiku", "opus" (or full names like "claude-3-5-sonnet-latest")
+    - OpenAI via litellm: "gpt-4.1", "gpt-4.1-mini", "gpt-4o"
 
-    Configure command names via env:
-    - CLAUDE_CMD (default: "claude")
-    - CODEX_CMD  (default: "codex")
+    Requires:
+    - Claude CLI installed and authenticated for Claude models
+    - OPENAI_API_KEY for OpenAI models
     """
-
-    if kind == "claude":
+    # Use Claude CLI for Claude/Anthropic models
+    if "claude" in model.lower() or model.lower() in ("sonnet", "haiku", "opus"):
         cmd = os.environ.get("CLAUDE_CMD", "claude")
-        # Claude CLI: print mode, model selection, prompt via stdin
-        args = [cmd, "-p", "--model", model]
-    elif kind == "codex":
-        cmd = os.environ.get("CODEX_CMD", "codex")
-        # Codex CLI: exec subcommand, model, temperature config, read from stdin
-        args = [cmd, "exec", "-m", model, "-c", f"temperature={temperature}", "-"]
-    else:
-        raise ValueError(f"Unknown kind: {kind}")
+        # Map short names to CLI model names
+        model_arg = model
+        if model.lower() == "sonnet":
+            model_arg = "sonnet"
+        elif model.lower() == "haiku":
+            model_arg = "haiku"
+        elif model.lower() == "opus":
+            model_arg = "opus"
 
-    proc = subprocess.run(
-        args,
-        input=prompt,
-        text=True,
-        capture_output=True,
-        check=False,
-    )
-    if proc.returncode != 0:
-        raise RuntimeError(
-            f"CLI call failed (kind={kind}, model={model})\n"
-            f"STDOUT:\n{proc.stdout}\n\nSTDERR:\n{proc.stderr}"
+        args = [cmd, "-p", "--model", model_arg]
+        proc = subprocess.run(
+            args,
+            input=prompt,
+            text=True,
+            capture_output=True,
+            check=False,
         )
-    return proc.stdout.strip()
+        if proc.returncode != 0:
+            raise RuntimeError(
+                f"Claude CLI call failed (model={model})\n"
+                f"STDOUT:\n{proc.stdout}\n\nSTDERR:\n{proc.stderr}"
+            )
+        return proc.stdout.strip()
+
+    # Use litellm for other models (OpenAI, etc.)
+    response = litellm.completion(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=temperature,
+        max_tokens=2048,
+    )
+    return response.choices[0].message.content.strip()
 
 
-def must_json_obj(s: str) -> dict[str, Any]:
+def extract_json(s: str) -> dict[str, Any]:
+    """Extract JSON object from model response, handling markdown code blocks."""
+    # Try direct parse first
     try:
         obj = json.loads(s)
-    except Exception as e:
-        raise ValueError(f"Model did not return valid JSON. Raw output:\n{s}") from e
-    if not isinstance(obj, dict):
-        raise ValueError(f"Model JSON must be an object. Raw output:\n{s}")
-    return obj
+        if isinstance(obj, dict):
+            return obj
+    except json.JSONDecodeError:
+        pass
+
+    # Try extracting from markdown code block
+    patterns = [
+        r"```json\s*([\s\S]*?)\s*```",
+        r"```\s*([\s\S]*?)\s*```",
+        r"\{[\s\S]*\}",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, s)
+        if match:
+            candidate = match.group(1) if "```" in pattern else match.group(0)
+            try:
+                obj = json.loads(candidate)
+                if isinstance(obj, dict):
+                    return obj
+            except json.JSONDecodeError:
+                continue
+
+    raise ValueError(f"Could not extract JSON object from response:\n{s}")
 
 
 def proposer_prompt(template: str, prompt: str) -> str:
@@ -137,27 +199,30 @@ def pairwise_agreement(answers: list[str]) -> tuple[int, int]:
 
 
 def main() -> int:
-    if len(sys.argv) < 5:
+    if len(sys.argv) < 4:
         print(
-            "Usage: scripts/run_baseline.py <run_name> <dataset_jsonl> <proposer_kind:claude|codex> <proposer_model> [<target_spec>...]\n\n"
-            "Target spec format: <kind>:<model>:<name> (name optional; defaults to model)\n"
-            "Example: codex:gpt-4.1-mini:codex-mini"
+            "Usage: scripts/run_baseline.py <run_name> <dataset_jsonl> <proposer_model> [<target_spec>...]\n\n"
+            "Models use litellm identifiers:\n"
+            "  - claude-3-5-sonnet-latest, claude-3-5-haiku-latest (Anthropic)\n"
+            "  - gpt-4.1, gpt-4.1-mini, gpt-4o (OpenAI)\n\n"
+            "Target spec format: <model>:<name> (name optional; defaults to model)\n"
+            "Example: gpt-4.1-mini:gpt4mini\n\n"
+            "Environment variables:\n"
+            "  ANTHROPIC_API_KEY - for Claude models\n"
+            "  OPENAI_API_KEY    - for OpenAI models"
         )
         return 2
 
     run_name = sys.argv[1]
     dataset_path = Path(sys.argv[2])
-    proposer_kind = sys.argv[3]
-    proposer_model = sys.argv[4]
+    proposer_model = sys.argv[3]
 
     targets: list[ModelSpec] = []
-    for spec in sys.argv[5:]:
+    for spec in sys.argv[4:]:
         parts = spec.split(":")
-        if len(parts) < 2:
-            raise ValueError(f"Bad target spec: {spec}")
-        kind, model = parts[0], parts[1]
-        name = parts[2] if len(parts) >= 3 else model
-        targets.append(ModelSpec(name=name, kind=kind, model=model))
+        model = parts[0]
+        name = parts[1] if len(parts) >= 2 else model
+        targets.append(ModelSpec(name=name, model=model))
 
     if not targets:
         raise ValueError("At least one target model is required.")
@@ -192,6 +257,10 @@ def main() -> int:
     (outdir / "prompts" / "target_no_trace.txt").write_text(target_no_trace_t, encoding="utf-8")
 
     items = read_jsonl(dataset_path)
+    print(f"Loaded {len(items)} items from {dataset_path}")
+    print(f"Proposer: {proposer_model}")
+    print(f"Targets: {[t.name for t in targets]}")
+    print()
 
     proposer_rows = []
     injected_rows = []
@@ -200,28 +269,27 @@ def main() -> int:
     correctness_rows = []
     metrics_rows = []
 
-    for it in items:
+    for idx, it in enumerate(items):
         item_id = str(it["id"])
         q = str(it["prompt"])
         gold = str(it["answer"])
 
+        print(f"[{idx+1}/{len(items)}] {item_id}...", end=" ", flush=True)
+
         # Proposer
         p_prompt = proposer_prompt(proposer_t, q)
-        p_raw = run_cli(proposer_kind, proposer_model, p_prompt, temperature="0")
-        p_obj = must_json_obj(p_raw)
+        p_raw = call_model(proposer_model, p_prompt, temperature=0.0)
+        p_obj = extract_json(p_raw)
         trace = str(p_obj.get("trace", ""))
         p_final = normalize_answer(str(p_obj.get("final", "")))
 
-        proposer_rows.append(
-            {
-                "id": item_id,
-                "proposer_kind": proposer_kind,
-                "proposer_model": proposer_model,
-                "trace": trace,
-                "final": p_final,
-                "raw": p_raw,
-            }
-        )
+        proposer_rows.append({
+            "id": item_id,
+            "proposer_model": proposer_model,
+            "trace": trace,
+            "final": p_final,
+            "raw": p_raw,
+        })
 
         # Targets
         with_trace_finals: dict[str, str] = {}
@@ -230,15 +298,15 @@ def main() -> int:
         for t in targets:
             # with trace
             twt = target_prompt_with_trace(target_with_trace_t, q, trace)
-            raw_w = run_cli(t.kind, t.model, twt, temperature=t.temperature)
-            obj_w = must_json_obj(raw_w)
+            raw_w = call_model(t.model, twt, temperature=0.0)
+            obj_w = extract_json(raw_w)
             fin_w = normalize_answer(str(obj_w.get("final", "")))
             with_trace_finals[t.name] = fin_w
 
             # no trace
             tnt = target_prompt_no_trace(target_no_trace_t, q)
-            raw_n = run_cli(t.kind, t.model, tnt, temperature=t.temperature)
-            obj_n = must_json_obj(raw_n)
+            raw_n = call_model(t.model, tnt, temperature=0.0)
+            obj_n = extract_json(raw_n)
             fin_n = normalize_answer(str(obj_n.get("final", "")))
             no_trace_finals[t.name] = fin_n
 
@@ -256,7 +324,6 @@ def main() -> int:
         agree_n, _ = pairwise_agreement(list(no_trace_finals.values()))
 
         # Agreement-on-correct / wrong (targets only)
-        # Definition: count per-item whether ALL targets agree; then check correctness of agreed answer.
         all_agree_w = len(set(with_trace_finals.values())) == 1
         all_agree_n = len(set(no_trace_finals.values())) == 1
 
@@ -265,22 +332,29 @@ def main() -> int:
         aon_c_n = int(all_agree_n and (next(iter(no_trace_finals.values())) == gold_n))
         aon_w_n = int(all_agree_n and (next(iter(no_trace_finals.values())) != gold_n))
 
-        metrics_rows.append(
-            {
-                "id": item_id,
-                "pairs_total": total_pairs,
-                "agree_pairs_with_trace": agree_w,
-                "agree_pairs_no_trace": agree_n,
-                "all_agree_with_trace": all_agree_w,
-                "all_agree_no_trace": all_agree_n,
-                "agree_on_correct_with_trace": aon_c_w,
-                "agree_on_wrong_with_trace": aon_w_w,
-                "agree_on_correct_no_trace": aon_c_n,
-                "agree_on_wrong_no_trace": aon_w_n,
-            }
-        )
+        metrics_rows.append({
+            "id": item_id,
+            "pairs_total": total_pairs,
+            "agree_pairs_with_trace": agree_w,
+            "agree_pairs_no_trace": agree_n,
+            "all_agree_with_trace": all_agree_w,
+            "all_agree_no_trace": all_agree_n,
+            "agree_on_correct_with_trace": aon_c_w,
+            "agree_on_wrong_with_trace": aon_w_w,
+            "agree_on_correct_no_trace": aon_c_n,
+            "agree_on_wrong_no_trace": aon_w_n,
+        })
 
         injected_rows.append({"id": item_id, "trace": trace})
+
+        # Quick status
+        p_correct = "✓" if p_final == gold_n else "✗"
+        print(f"proposer:{p_correct}", end="")
+        for t in targets:
+            tw = "✓" if with_trace_finals[t.name] == gold_n else "✗"
+            tn = "✓" if no_trace_finals[t.name] == gold_n else "✗"
+            print(f" {t.name}:w{tw}/n{tn}", end="")
+        print()
 
     # Write artifacts
     write_jsonl(outdir / "traces" / "proposer.jsonl", proposer_rows)
@@ -290,7 +364,7 @@ def main() -> int:
     write_jsonl(outdir / "judgments" / "correctness.jsonl", correctness_rows)
     write_jsonl(outdir / "metrics.jsonl", metrics_rows)
 
-    # Aggregate summary (simple; extend later)
+    # Aggregate summary
     def mean(xs: list[float]) -> float:
         return sum(xs) / max(1, len(xs))
 
@@ -311,12 +385,20 @@ def main() -> int:
         acc_with[t.name] = sum(cw) / max(1, len(cw))
         acc_no[t.name] = sum(cn) / max(1, len(cn))
 
+    # Proposer accuracy
+    proposer_acc = sum(1 for r in proposer_rows if normalize_answer(r["final"]) == normalize_answer(
+        next(c["gold"] for c in correctness_rows if c["id"] == r["id"])
+    )) / max(1, len(proposer_rows))
+
+    git_info = get_git_info()
+
     summary = {
         "run_name": run_name,
         "dataset": str(dataset_path),
         "n_items": len(items),
-        "proposer": {"kind": proposer_kind, "model": proposer_model, "temperature": "0"},
-        "targets": [t.__dict__ for t in targets],
+        "git": git_info,
+        "proposer": {"model": proposer_model, "temperature": 0.0, "accuracy": proposer_acc},
+        "targets": [{"name": t.name, "model": t.model} for t in targets],
         "agreement_rate": {"with_trace": agree_rate_w, "no_trace": agree_rate_n},
         "agree_all_counts": {
             "agree_on_correct_with_trace": aon_c_w,
@@ -324,51 +406,95 @@ def main() -> int:
             "agree_on_correct_no_trace": aon_c_n,
             "agree_on_wrong_no_trace": aon_w_n,
         },
-        "accuracy": {"with_trace": acc_with, "no_trace": acc_no, "transfer_gain": {k: acc_with[k] - acc_no[k] for k in acc_no}},
+        "accuracy": {
+            "with_trace": acc_with,
+            "no_trace": acc_no,
+            "transfer_gain": {k: acc_with[k] - acc_no[k] for k in acc_no},
+        },
     }
     (outdir / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-    report = (
-        f"# Report: {run_name}\n\n"
-        f"Items: {len(items)}\n\n"
-        f"## Agreement\n"
-        f"- Pairwise agreement rate (with trace): {agree_rate_w:.4f}\n"
-        f"- Pairwise agreement rate (no trace):  {agree_rate_n:.4f}\n\n"
-        f"## Accuracy\n"
-        + "\n".join([f"- {m}: with={acc_with[m]:.4f} no={acc_no[m]:.4f} Δ={acc_with[m]-acc_no[m]:+.4f}" for m in acc_no])
-        + "\n\n"
-        f"## All-target agreement outcomes (counts)\n"
-        f"- Agree-on-correct (with trace): {aon_c_w}\n"
-        f"- Agree-on-wrong   (with trace): {aon_w_w}\n"
-        f"- Agree-on-correct (no trace):  {aon_c_n}\n"
-        f"- Agree-on-wrong   (no trace):  {aon_w_n}\n"
-    )
-    (outdir / "report.md").write_text(report, encoding="utf-8")
+    # Generate report
+    report_lines = [
+        f"# Report: {run_name}",
+        "",
+        f"**Dataset:** {dataset_path}",
+        f"**Items:** {len(items)}",
+        f"**Git:** {git_info['tag']} ({git_info['commit']})",
+        "",
+        "## Proposer",
+        f"- Model: {proposer_model}",
+        f"- Accuracy: {proposer_acc:.4f}",
+        "",
+        "## Agreement",
+        f"- Pairwise agreement rate (with trace): {agree_rate_w:.4f}",
+        f"- Pairwise agreement rate (no trace):  {agree_rate_n:.4f}",
+        f"- Δ agreement: {agree_rate_w - agree_rate_n:+.4f}",
+        "",
+        "## Accuracy by Target Model",
+        "",
+        "| Model | No Trace | With Trace | Transfer Gain |",
+        "|-------|----------|------------|---------------|",
+    ]
+    for m in acc_no:
+        delta = acc_with[m] - acc_no[m]
+        report_lines.append(f"| {m} | {acc_no[m]:.4f} | {acc_with[m]:.4f} | {delta:+.4f} |")
 
-    # Minimal manifest (extend as needed)
+    report_lines.extend([
+        "",
+        "## All-Target Agreement Outcomes",
+        "",
+        "| Condition | Agree-on-Correct | Agree-on-Wrong |",
+        "|-----------|------------------|----------------|",
+        f"| With Trace | {aon_c_w} | {aon_w_w} |",
+        f"| No Trace | {aon_c_n} | {aon_w_n} |",
+        "",
+        "## Summary Questions",
+        "",
+        f"1. **Did trace injection increase agreement?** {'Yes' if agree_rate_w > agree_rate_n else 'No'} (Δ = {agree_rate_w - agree_rate_n:+.4f})",
+        "",
+        "2. **Did trace injection increase accuracy?**",
+    ])
+    for m in acc_no:
+        delta = acc_with[m] - acc_no[m]
+        answer = "Yes" if delta > 0 else ("No change" if delta == 0 else "No (decreased)")
+        report_lines.append(f"   - {m}: {answer} (Δ = {delta:+.4f})")
+
+    consistent_wrong_change = aon_w_w - aon_w_n
+    report_lines.extend([
+        "",
+        f"3. **Did consistent-wrong increase?** {'Yes' if consistent_wrong_change > 0 else 'No'} ({aon_w_n} → {aon_w_w}, Δ = {consistent_wrong_change:+d})",
+    ])
+
+    (outdir / "report.md").write_text("\n".join(report_lines), encoding="utf-8")
+
+    # Manifest
     manifest = {
         "run_name": run_name,
         "created_utc": utc_ts_compact(),
-        "git": {"commit": os.environ.get("GIT_COMMIT", "UNKNOWN"), "tag": os.environ.get("GIT_TAG", "UNKNOWN")},
-        "cli": {
-            "claude_cmd": os.environ.get("CLAUDE_CMD", "claude"),
-            "codex_cmd": os.environ.get("CODEX_CMD", "codex"),
-        },
+        "git": git_info,
+        "experiment": "baseline-singletrace",
+        "axis": "trace_injection",
+        "conditions": ["with_trace", "no_trace"],
         "notes": "Baseline: single proposer trace injection vs no-trace control. No harmonization.",
     }
     (outdir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
+    # Config
     (outdir / "config.json").write_text(
-        json.dumps(
-            {
-                "dataset": str(dataset_path),
-                "proposer": {"kind": proposer_kind, "model": proposer_model, "temperature": "0"},
-                "targets": [t.__dict__ for t in targets],
-            },
-            indent=2,
-        ),
+        json.dumps({
+            "dataset": str(dataset_path),
+            "proposer": {"model": proposer_model, "temperature": 0.0},
+            "targets": [{"name": t.name, "model": t.model, "temperature": 0.0} for t in targets],
+        }, indent=2),
         encoding="utf-8",
     )
+
+    print()
+    print("=" * 60)
+    print(f"Run complete: {run_name}")
+    print(f"Results: {outdir}")
+    print("=" * 60)
 
     return 0
 

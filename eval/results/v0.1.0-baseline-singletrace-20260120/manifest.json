@@ -1,0 +1,15 @@
+{
+  "run_name": "v0.1.0-baseline-singletrace-20260120",
+  "created_utc": "20260120T213344Z",
+  "git": {
+    "commit": "81d8a23928fa",
+    "tag": "81d8a23"
+  },
+  "experiment": "baseline-singletrace",
+  "axis": "trace_injection",
+  "conditions": [
+    "with_trace",
+    "no_trace"
+  ],
+  "notes": "Baseline: single proposer trace injection vs no-trace control. No harmonization."
+}
