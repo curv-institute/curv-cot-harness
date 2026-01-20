@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+.uv/
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+
+# Results (selective)
+eval/results/**/figures/
+eval/results/**/tables/
+
+# Temporary / scratch
+tmp/
+scratch/
+logs/
+
+# Secrets
+.env
+.env.*
