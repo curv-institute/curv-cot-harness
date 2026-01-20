@@ -1,0 +1,55 @@
+{
+  "run_name": "v0.1.1-baseline-multitarget-claude-20260120",
+  "dataset": "eval/datasets/arithmetic-60.jsonl",
+  "n_items": 60,
+  "git": {
+    "commit": "1c0a4155b375",
+    "tag": "1c0a415"
+  },
+  "proposer": {
+    "model": "sonnet",
+    "temperature": 0.0,
+    "accuracy": 1.0
+  },
+  "targets": [
+    {
+      "name": "opus",
+      "model": "opus"
+    },
+    {
+      "name": "sonnet_tgt",
+      "model": "sonnet"
+    },
+    {
+      "name": "haiku",
+      "model": "haiku"
+    }
+  ],
+  "agreement_rate": {
+    "with_trace": 1.0,
+    "no_trace": 0.9666666666666667
+  },
+  "agree_all_counts": {
+    "agree_on_correct_with_trace": 60,
+    "agree_on_wrong_with_trace": 0,
+    "agree_on_correct_no_trace": 57,
+    "agree_on_wrong_no_trace": 0
+  },
+  "accuracy": {
+    "with_trace": {
+      "opus": 1.0,
+      "sonnet_tgt": 1.0,
+      "haiku": 1.0
+    },
+    "no_trace": {
+      "opus": 1.0,
+      "sonnet_tgt": 1.0,
+      "haiku": 0.95
+    },
+    "transfer_gain": {
+      "opus": 0.0,
+      "sonnet_tgt": 0.0,
+      "haiku": 0.050000000000000044
+    }
+  }
+}

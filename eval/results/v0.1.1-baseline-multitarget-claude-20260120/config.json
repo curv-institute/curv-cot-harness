@@ -1,0 +1,24 @@
+{
+  "dataset": "eval/datasets/arithmetic-60.jsonl",
+  "proposer": {
+    "model": "sonnet",
+    "temperature": 0.0
+  },
+  "targets": [
+    {
+      "name": "opus",
+      "model": "opus",
+      "temperature": 0.0
+    },
+    {
+      "name": "sonnet_tgt",
+      "model": "sonnet",
+      "temperature": 0.0
+    },
+    {
+      "name": "haiku",
+      "model": "haiku",
+      "temperature": 0.0
+    }
+  ]
+}

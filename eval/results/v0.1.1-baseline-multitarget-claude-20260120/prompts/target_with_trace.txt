@@ -1,0 +1,11 @@
+You will solve the task below.
+
+A reasoning trace from another system is provided. Use it if helpful, but you must decide the final answer yourself.
+
+Return ONLY valid JSON with key: "final".
+
+Task:
+{{PROMPT}}
+
+Provided trace:
+{{TRACE}}

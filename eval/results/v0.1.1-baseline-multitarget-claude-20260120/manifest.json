@@ -1,0 +1,15 @@
+{
+  "run_name": "v0.1.1-baseline-multitarget-claude-20260120",
+  "created_utc": "20260120T223509Z",
+  "git": {
+    "commit": "1c0a4155b375",
+    "tag": "1c0a415"
+  },
+  "experiment": "baseline-singletrace",
+  "axis": "trace_injection",
+  "conditions": [
+    "with_trace",
+    "no_trace"
+  ],
+  "notes": "Baseline: single proposer trace injection vs no-trace control. No harmonization."
+}
