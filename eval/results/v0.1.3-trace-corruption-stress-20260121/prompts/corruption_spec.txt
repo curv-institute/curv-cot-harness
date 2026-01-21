@@ -1,0 +1,14 @@
+Corruption Specification
+========================
+
+Selection: K=15 items selected by sorting SHA256(item_id) ascending, taking first 15.
+
+Corruption method:
+1. Find first "= <number>" pattern in trace
+2. Modify number by +1 or -1 (determined by SHA256(item_id)[0] % 2)
+3. Modify final answer by same delta
+
+Constraints:
+- Deterministic given item_id
+- Minimal change (single arithmetic error)
+- Plausible (no obviously wrong text)

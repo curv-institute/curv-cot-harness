@@ -1,0 +1,6 @@
+opus: opus
+sonnet_tgt: sonnet
+haiku: haiku
+gpt5_codex: gpt-5-codex
+gpt52_codex: gpt-5.2-codex
+gpt52: gpt-5.2

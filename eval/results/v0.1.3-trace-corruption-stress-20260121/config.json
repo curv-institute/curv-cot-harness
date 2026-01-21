@@ -1,0 +1,43 @@
+{
+  "dataset": "eval/datasets/arithmetic-60.jsonl",
+  "proposer": {
+    "model": "sonnet",
+    "temperature": 0.0
+  },
+  "targets": [
+    {
+      "name": "opus",
+      "model": "opus",
+      "temperature": 0.0
+    },
+    {
+      "name": "sonnet_tgt",
+      "model": "sonnet",
+      "temperature": 0.0
+    },
+    {
+      "name": "haiku",
+      "model": "haiku",
+      "temperature": 0.0
+    },
+    {
+      "name": "gpt5_codex",
+      "model": "gpt-5-codex",
+      "temperature": 0.0
+    },
+    {
+      "name": "gpt52_codex",
+      "model": "gpt-5.2-codex",
+      "temperature": 0.0
+    },
+    {
+      "name": "gpt52",
+      "model": "gpt-5.2",
+      "temperature": 0.0
+    }
+  ],
+  "corruption": {
+    "k": 15,
+    "method": "arithmetic_flip_by_1"
+  }
+}
