@@ -1,0 +1,15 @@
+{
+  "run_name": "v0.1.2-baseline-multitarget-claude-plus-gpt52-20260120",
+  "created_utc": "20260121T070158Z",
+  "git": {
+    "commit": "e1a8603c654c",
+    "tag": "e1a8603"
+  },
+  "experiment": "baseline-singletrace",
+  "axis": "trace_injection",
+  "conditions": [
+    "with_trace",
+    "no_trace"
+  ],
+  "notes": "Baseline: single proposer trace injection vs no-trace control. No harmonization."
+}

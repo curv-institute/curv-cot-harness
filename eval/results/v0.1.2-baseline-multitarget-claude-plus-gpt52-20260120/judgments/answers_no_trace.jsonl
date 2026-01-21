@@ -1,0 +1,360 @@
+{"id": "item-0000", "model": "opus", "final": "50", "raw": "```json\n{\"final\": 50}\n```"}
+{"id": "item-0000", "model": "sonnet_tgt", "final": "50", "raw": "```json\n{\n  \"final\": 50\n}\n```"}
+{"id": "item-0000", "model": "haiku", "final": "The store has 50 apples. (34 + 16 = 50)", "raw": "```json\n{\n  \"final\": \"The store has 50 apples. (34 + 16 = 50)\"\n}\n```"}
+{"id": "item-0000", "model": "gpt5_codex", "final": "50", "raw": "{\"final\":\"50\"}"}
+{"id": "item-0000", "model": "gpt52_codex", "final": "50", "raw": "{\"final\":\"50\"}"}
+{"id": "item-0000", "model": "gpt52", "final": "50", "raw": "{\"final\":\"50\"}"}
+{"id": "item-0001", "model": "opus", "final": "2", "raw": "{\"final\": 2}"}
+{"id": "item-0001", "model": "sonnet_tgt", "final": "2", "raw": "```json\n{\n  \"final\": 2\n}\n```"}
+{"id": "item-0001", "model": "haiku", "final": "2", "raw": "```json\n{\n  \"final\": 2\n}\n```"}
+{"id": "item-0001", "model": "gpt5_codex", "final": "2", "raw": "{\"final\":\"2\"}"}
+{"id": "item-0001", "model": "gpt52_codex", "final": "2", "raw": "{\"final\":\"2\"}"}
+{"id": "item-0001", "model": "gpt52", "final": "2", "raw": "{\"final\":\"2\"}"}
+{"id": "item-0002", "model": "opus", "final": "221", "raw": "{\"final\": 221}"}
+{"id": "item-0002", "model": "sonnet_tgt", "final": "221", "raw": "```json\n{\n  \"final\": 221\n}\n```"}
+{"id": "item-0002", "model": "haiku", "final": "221", "raw": "```json\n{\n  \"final\": 221\n}\n```\n\nThe calculation is: 17 rows × 13 trees per row = 221 trees total."}
+{"id": "item-0002", "model": "gpt5_codex", "final": "221", "raw": "{\"final\":\"221\"}"}
+{"id": "item-0002", "model": "gpt52_codex", "final": "221", "raw": "{\"final\":\"221\"}"}
+{"id": "item-0002", "model": "gpt52", "final": "221", "raw": "{\"final\":\"221\"}"}
+{"id": "item-0003", "model": "opus", "final": "10", "raw": "{\"final\": 10}"}
+{"id": "item-0003", "model": "sonnet_tgt", "final": "10", "raw": "```json\n{\n  \"final\": 10\n}\n```"}
+{"id": "item-0003", "model": "haiku", "final": "10", "raw": "```json\n{\n  \"final\": 10\n}\n```\n\nThe calculation is straightforward: 90 pencils ÷ 9 students = 10 pencils per student."}
+{"id": "item-0003", "model": "gpt5_codex", "final": "10", "raw": "{\"final\":\"10\"}"}
+{"id": "item-0003", "model": "gpt52_codex", "final": "10", "raw": "{\"final\":\"10\"}"}
+{"id": "item-0003", "model": "gpt52", "final": "Each student gets 10 pencils.", "raw": "{\"final\":\"Each student gets 10 pencils.\"}"}
+{"id": "item-0004", "model": "opus", "final": "180", "raw": "{\"final\": 180}"}
+{"id": "item-0004", "model": "sonnet_tgt", "final": "180", "raw": "I need to solve this arithmetic problem step by step.\n\nLet me calculate:\n1. Total cakes made = 11 (morning) + 9 (afternoon) = 20 cakes\n2. Each cake is cut into 9 slices\n3. Total slices = 20 cakes × 9 slices per cake = 180 slices\n\n```json\n{\"final\": 180}\n```"}
+{"id": "item-0004", "model": "haiku", "final": "180", "raw": "I need to solve this math problem step by step.\n\nLet me calculate:\n1. Total cakes made: 11 (morning) + 9 (afternoon) = 20 cakes\n2. Slices per cake: 9 slices\n3. Total slices: 20 cakes × 9 slices per cake = 180 slices\n\n```json\n{\n  \"final\": 180\n}\n```"}
+{"id": "item-0004", "model": "gpt5_codex", "final": "180", "raw": "{\"final\":180}"}
+{"id": "item-0004", "model": "gpt52_codex", "final": "180", "raw": "{\"final\":\"180\"}"}
+{"id": "item-0004", "model": "gpt52", "final": "180", "raw": "{\"final\":180}"}
+{"id": "item-0005", "model": "opus", "final": "297", "raw": "{\"final\": 297}"}
+{"id": "item-0005", "model": "sonnet_tgt", "final": "297", "raw": "I need to solve this math problem and return the answer in JSON format.\n\nLet me calculate:\n- Total cookies initially: 20 packs × 16 cookies/pack = 320 cookies\n- Cookies eaten: 23 cookies\n- Cookies remaining: 320 - 23 = 297 cookies\n\n```json\n{\"final\": 297}\n```"}
+{"id": "item-0005", "model": "haiku", "final": "297", "raw": "I'll solve this step-by-step.\n\n**Calculation:**\n- Total cookies in box: 20 packs × 16 cookies/pack = 320 cookies\n- Cookies eaten: 23\n- Cookies remaining: 320 - 23 = 297 cookies\n\n```json\n{\n  \"final\": 297\n}\n```"}
+{"id": "item-0005", "model": "gpt5_codex", "final": "297", "raw": "{\"final\":\"297\"}"}
+{"id": "item-0005", "model": "gpt52_codex", "final": "297", "raw": "{\"final\":\"297\"}"}
+{"id": "item-0005", "model": "gpt52", "final": "297", "raw": "{\"final\":297}"}
+{"id": "item-0006", "model": "opus", "final": "62", "raw": "{\"final\": 62}"}
+{"id": "item-0006", "model": "sonnet_tgt", "final": "62", "raw": "```json\n{\n  \"final\": 62\n}\n```"}
+{"id": "item-0006", "model": "haiku", "final": "62", "raw": "```json\n{\n  \"final\": 62\n}\n```"}
+{"id": "item-0006", "model": "gpt5_codex", "final": "62", "raw": "{\"final\":\"62\"}"}
+{"id": "item-0006", "model": "gpt52_codex", "final": "62", "raw": "{\"final\":\"62\"}"}
+{"id": "item-0006", "model": "gpt52", "final": "62", "raw": "{\"final\":\"62\"}"}
+{"id": "item-0007", "model": "opus", "final": "8", "raw": "{\"final\": 8}"}
+{"id": "item-0007", "model": "sonnet_tgt", "final": "8", "raw": "```json\n{\n  \"final\": 8\n}\n```"}
+{"id": "item-0007", "model": "haiku", "final": "8", "raw": "```json\n{\n  \"final\": 8\n}\n```\n\nThe calculation is straightforward: 55 books - 47 books checked out = 8 books remaining in the library."}
+{"id": "item-0007", "model": "gpt5_codex", "final": "8", "raw": "{\"final\":\"8\"}"}
+{"id": "item-0007", "model": "gpt52_codex", "final": "8", "raw": "{\"final\":\"8\"}"}
+{"id": "item-0007", "model": "gpt52", "final": "8", "raw": "{\"final\":8}"}
+{"id": "item-0008", "model": "opus", "final": "286", "raw": "```json\n{\"final\": 286}\n```"}
+{"id": "item-0008", "model": "sonnet_tgt", "final": "286", "raw": "```json\n{\n  \"final\": 286\n}\n```"}
+{"id": "item-0008", "model": "haiku", "final": "286", "raw": "I need to solve this simple arithmetic problem.\n\nThe farmer has:\n- 22 rows\n- 13 trees per row\n\nTotal trees = 22 × 13 = 286\n\n```json\n{\n  \"final\": 286\n}\n```"}
+{"id": "item-0008", "model": "gpt5_codex", "final": "286", "raw": "{\"final\":\"286\"}"}
+{"id": "item-0008", "model": "gpt52_codex", "final": "The farmer has 286 trees in total.", "raw": "{\"final\":\"The farmer has 286 trees in total.\"}"}
+{"id": "item-0008", "model": "gpt52", "final": "286", "raw": "{\"final\":\"286\"}"}
+{"id": "item-0009", "model": "opus", "final": "12", "raw": "```json\n{\"final\": 12}\n```"}
+{"id": "item-0009", "model": "sonnet_tgt", "final": "12", "raw": "```json\n{\n  \"final\": 12\n}\n```"}
+{"id": "item-0009", "model": "haiku", "final": "12", "raw": "I need to solve this math problem and return the answer as JSON.\n\nThis is a simple division problem: 48 pencils ÷ 4 students = 12 pencils per student.\n\n```json\n{\n  \"final\": 12\n}\n```"}
+{"id": "item-0009", "model": "gpt5_codex", "final": "12", "raw": "{\"final\":\"12\"}"}
+{"id": "item-0009", "model": "gpt52_codex", "final": "12", "raw": "{\"final\":\"12\"}"}
+{"id": "item-0009", "model": "gpt52", "final": "12", "raw": "{\"final\":\"12\"}"}
+{"id": "item-0010", "model": "opus", "final": "310", "raw": "```json\n{\"final\": 310}\n```"}
+{"id": "item-0010", "model": "sonnet_tgt", "final": "310", "raw": "```json\n{\n  \"final\": 310\n}\n```"}
+{"id": "item-0010", "model": "haiku", "final": "310", "raw": "```json\n{\n  \"final\": 310\n}\n```\n\n**Calculation:**\n- Morning cakes: 16\n- Afternoon cakes: 15\n- Total cakes: 16 + 15 = 31\n- Slices per cake: 10\n- Total slices: 31 × 10 = 310"}
+{"id": "item-0010", "model": "gpt5_codex", "final": "310", "raw": "{\"final\":\"310\"}"}
+{"id": "item-0010", "model": "gpt52_codex", "final": "310", "raw": "{\"final\":\"310\"}"}
+{"id": "item-0010", "model": "gpt52", "final": "The bakery makes 31 cakes total (16 + 15). Each cake has 10 slices, so there are 310 slices in total.", "raw": "{\"final\":\"The bakery makes 31 cakes total (16 + 15). Each cake has 10 slices, so there are 310 slices in total.\"}"}
+{"id": "item-0011", "model": "opus", "final": "120", "raw": "{\"final\": 120}"}
+{"id": "item-0011", "model": "sonnet_tgt", "final": "120", "raw": "I need to solve this math problem and return the answer in JSON format.\n\nLet me calculate:\n- Initial cookies: 9 packs × 16 cookies/pack = 144 cookies\n- Cookies eaten: 24 cookies\n- Remaining cookies: 144 - 24 = 120 cookies\n\n```json\n{\"final\": 120}\n```"}
+{"id": "item-0011", "model": "haiku", "final": "120", "raw": "```json\n{\n  \"final\": 120\n}\n```\n\n**Calculation:**\n- Total cookies: 9 packs × 16 cookies/pack = 144 cookies\n- Cookies eaten: 24\n- Cookies remaining: 144 - 24 = 120 cookies"}
+{"id": "item-0011", "model": "gpt5_codex", "final": "120", "raw": "{\"final\":\"120\"}"}
+{"id": "item-0011", "model": "gpt52_codex", "final": "120", "raw": "{\"final\":\"120\"}"}
+{"id": "item-0011", "model": "gpt52", "final": "120", "raw": "{\"final\":\"120\"}"}
+{"id": "item-0012", "model": "opus", "final": "59", "raw": "{\"final\": 59}"}
+{"id": "item-0012", "model": "sonnet_tgt", "final": "59", "raw": "```json\n{\n  \"final\": 59\n}\n```"}
+{"id": "item-0012", "model": "haiku", "final": "The store has 59 apples now. (30 initial apples + 29 apples from shipment = 59 apples)", "raw": "```json\n{\n  \"final\": \"The store has 59 apples now. (30 initial apples + 29 apples from shipment = 59 apples)\"\n}\n```"}
+{"id": "item-0012", "model": "gpt5_codex", "final": "59", "raw": "{\"final\":\"59\"}"}
+{"id": "item-0012", "model": "gpt52_codex", "final": "59", "raw": "{\"final\":\"59\"}"}
+{"id": "item-0012", "model": "gpt52", "final": "59", "raw": "{\"final\":\"59\"}"}
+{"id": "item-0013", "model": "opus", "final": "32", "raw": "{\"final\": 32}"}
+{"id": "item-0013", "model": "sonnet_tgt", "final": "32", "raw": "```json\n{\n  \"final\": 32\n}\n```"}
+{"id": "item-0013", "model": "haiku", "final": "32", "raw": "```json\n{\n  \"final\": 32\n}\n```"}
+{"id": "item-0013", "model": "gpt5_codex", "final": "32", "raw": "{\"final\":\"32\"}"}
+{"id": "item-0013", "model": "gpt52_codex", "final": "32", "raw": "{\"final\":\"32\"}"}
+{"id": "item-0013", "model": "gpt52", "final": "32", "raw": "{\"final\":\"32\"}"}
+{"id": "item-0014", "model": "opus", "final": "110", "raw": "```json\n{\"final\": 110}\n```"}
+{"id": "item-0014", "model": "sonnet_tgt", "final": "110", "raw": "```json\n{\n  \"final\": 110\n}\n```"}
+{"id": "item-0014", "model": "haiku", "final": "110", "raw": "I need to solve this simple arithmetic problem.\n\nThe farmer has:\n- 11 rows of trees\n- 10 trees in each row\n\nTotal trees = 11 × 10 = 110\n\n```json\n{\n  \"final\": 110\n}\n```"}
+{"id": "item-0014", "model": "gpt5_codex", "final": "110", "raw": "{\"final\":\"110\"}"}
+{"id": "item-0014", "model": "gpt52_codex", "final": "110", "raw": "{\"final\":\"110\"}"}
+{"id": "item-0014", "model": "gpt52", "final": "110", "raw": "{\"final\":110}"}
+{"id": "item-0015", "model": "opus", "final": "6", "raw": "```json\n{\"final\": 6}\n```"}
+{"id": "item-0015", "model": "sonnet_tgt", "final": "6", "raw": "```json\n{\n  \"final\": 6\n}\n```"}
+{"id": "item-0015", "model": "haiku", "final": "6", "raw": "```json\n{\n  \"final\": 6\n}\n```"}
+{"id": "item-0015", "model": "gpt5_codex", "final": "6", "raw": "{\"final\":\"6\"}"}
+{"id": "item-0015", "model": "gpt52_codex", "final": "6", "raw": "{\"final\":\"6\"}"}
+{"id": "item-0015", "model": "gpt52", "final": "6", "raw": "{\"final\":\"6\"}"}
+{"id": "item-0016", "model": "opus", "final": "81", "raw": "{\"final\": 81}"}
+{"id": "item-0016", "model": "sonnet_tgt", "final": "81", "raw": "I need to solve this math problem step by step:\n\n1. Total cakes made = 16 (morning) + 11 (afternoon) = 27 cakes\n2. Each cake is cut into 3 slices\n3. Total slices = 27 cakes × 3 slices per cake = 81 slices\n\n```json\n{\"final\": 81}\n```"}
+{"id": "item-0016", "model": "haiku", "final": "The bakery makes 16 + 11 = 27 cakes in total. If each cake is cut into 3 slices, there are 27 × 3 = 81 slices in total.", "raw": "```json\n{\n  \"final\": \"The bakery makes 16 + 11 = 27 cakes in total. If each cake is cut into 3 slices, there are 27 × 3 = 81 slices in total.\"\n}\n```"}
+{"id": "item-0016", "model": "gpt5_codex", "final": "81", "raw": "{\"final\":\"81\"}"}
+{"id": "item-0016", "model": "gpt52_codex", "final": "81", "raw": "{\"final\":\"81\"}"}
+{"id": "item-0016", "model": "gpt52", "final": "The bakery makes 27 cakes total, and cutting each into 3 slices gives 27 × 3 = 81 slices in total.", "raw": "{\"final\":\"The bakery makes 27 cakes total, and cutting each into 3 slices gives 27 × 3 = 81 slices in total.\"}"}
+{"id": "item-0017", "model": "opus", "final": "83", "raw": "{\"final\": 83}"}
+{"id": "item-0017", "model": "sonnet_tgt", "final": "83", "raw": "I need to solve this math problem and return the result in JSON format.\n\nLet me calculate:\n- Starting cookies: 11 packs × 8 cookies per pack = 88 cookies\n- Cookies eaten: 5\n- Remaining cookies: 88 - 5 = 83 cookies\n\n```json\n{\"final\": 83}\n```"}
+{"id": "item-0017", "model": "haiku", "final": "83", "raw": "I need to calculate how many cookies remain.\n\nLet me work through this:\n- 11 packs × 8 cookies per pack = 88 cookies total\n- 88 cookies - 5 cookies eaten = 83 cookies remain\n\n```json\n{\n  \"final\": 83\n}\n```"}
+{"id": "item-0017", "model": "gpt5_codex", "final": "83", "raw": "{\"final\":\"83\"}"}
+{"id": "item-0017", "model": "gpt52_codex", "final": "83", "raw": "{\"final\":\"83\"}"}
+{"id": "item-0017", "model": "gpt52", "final": "83", "raw": "{\"final\":83}"}
+{"id": "item-0018", "model": "opus", "final": "60", "raw": "{\"final\": 60}"}
+{"id": "item-0018", "model": "sonnet_tgt", "final": "60", "raw": "```json\n{\n  \"final\": 60\n}\n```"}
+{"id": "item-0018", "model": "haiku", "final": "60", "raw": "```json\n{\n  \"final\": 60\n}\n```"}
+{"id": "item-0018", "model": "gpt5_codex", "final": "60", "raw": "{\"final\":\"60\"}"}
+{"id": "item-0018", "model": "gpt52_codex", "final": "60", "raw": "{\"final\":\"60\"}"}
+{"id": "item-0018", "model": "gpt52", "final": "60", "raw": "{\"final\":\"60\"}"}
+{"id": "item-0019", "model": "opus", "final": "49", "raw": "{\"final\": 49}"}
+{"id": "item-0019", "model": "sonnet_tgt", "final": "49", "raw": "```json\n{\n  \"final\": 49\n}\n```"}
+{"id": "item-0019", "model": "haiku", "final": "49", "raw": "```json\n{\n  \"final\": 49\n}\n```"}
+{"id": "item-0019", "model": "gpt5_codex", "final": "49", "raw": "{\"final\":\"49\"}"}
+{"id": "item-0019", "model": "gpt52_codex", "final": "49", "raw": "{\"final\":\"49\"}"}
+{"id": "item-0019", "model": "gpt52", "final": "49", "raw": "{\"final\":\"49\"}"}
+{"id": "item-0020", "model": "opus", "final": "574", "raw": "{\"final\": 574}"}
+{"id": "item-0020", "model": "sonnet_tgt", "final": "574", "raw": "I need to calculate the total number of trees by multiplying the number of rows by the number of trees per row.\n\n14 rows × 41 trees per row = 574 trees\n\n```json\n{\n  \"final\": 574\n}\n```"}
+{"id": "item-0020", "model": "haiku", "final": "574", "raw": "I need to calculate the total number of trees by multiplying the number of rows by the number of trees per row.\n\nTotal trees = 14 rows × 41 trees per row = 574 trees\n\n```json\n{\n  \"final\": 574\n}\n```"}
+{"id": "item-0020", "model": "gpt5_codex", "final": "574", "raw": "{\"final\":\"574\"}"}
+{"id": "item-0020", "model": "gpt52_codex", "final": "574", "raw": "{\"final\":\"574\"}"}
+{"id": "item-0020", "model": "gpt52", "final": "574", "raw": "{\"final\":\"574\"}"}
+{"id": "item-0021", "model": "opus", "final": "20", "raw": "{\"final\": 20}"}
+{"id": "item-0021", "model": "sonnet_tgt", "final": "20", "raw": "```json\n{\n  \"final\": 20\n}\n```"}
+{"id": "item-0021", "model": "haiku", "final": "Each student gets 20 pencils. (40 pencils ÷ 2 students = 20 pencils per student)", "raw": "```json\n{\n  \"final\": \"Each student gets 20 pencils. (40 pencils ÷ 2 students = 20 pencils per student)\"\n}\n```"}
+{"id": "item-0021", "model": "gpt5_codex", "final": "Each student gets 20 pencils.", "raw": "{\"final\":\"Each student gets 20 pencils.\"}"}
+{"id": "item-0021", "model": "gpt52_codex", "final": "20", "raw": "{\"final\":\"20\"}"}
+{"id": "item-0021", "model": "gpt52", "final": "20", "raw": "{\"final\":\"20\"}"}
+{"id": "item-0022", "model": "opus", "final": "48", "raw": "{\"final\": 48}"}
+{"id": "item-0022", "model": "sonnet_tgt", "final": "48", "raw": "```json\n{\n  \"final\": 48\n}\n```"}
+{"id": "item-0022", "model": "haiku", "final": "48", "raw": "```json\n{\n  \"final\": 48\n}\n```\n\n**Explanation:**\n- Morning cakes: 6\n- Afternoon cakes: 10\n- Total cakes: 6 + 10 = 16\n- Slices per cake: 3\n- Total slices: 16 × 3 = 48"}
+{"id": "item-0022", "model": "gpt5_codex", "final": "48", "raw": "{\"final\":\"48\"}"}
+{"id": "item-0022", "model": "gpt52_codex", "final": "48", "raw": "{\"final\":\"48\"}"}
+{"id": "item-0022", "model": "gpt52", "final": "48", "raw": "{\"final\":\"48\"}"}
+{"id": "item-0023", "model": "opus", "final": "196", "raw": "{\"final\": 196}"}
+{"id": "item-0023", "model": "sonnet_tgt", "final": "196", "raw": "I need to solve this math problem and return the answer in JSON format.\n\nLet me calculate:\n- Total cookies initially: 12 packs × 17 cookies per pack = 204 cookies\n- Cookies eaten: 8 cookies\n- Cookies remaining: 204 - 8 = 196 cookies\n\n```json\n{\"final\": 196}\n```"}
+{"id": "item-0023", "model": "haiku", "final": "196", "raw": "I need to solve this math problem step by step.\n\nGiven information:\n- 12 packs of cookies\n- 17 cookies per pack\n- 8 cookies are eaten\n\nCalculation:\n1. Total cookies initially: 12 × 17 = 204 cookies\n2. After eating 8 cookies: 204 - 8 = 196 cookies\n\n```json\n{\n  \"final\": 196\n}\n```"}
+{"id": "item-0023", "model": "gpt5_codex", "final": "196", "raw": "{\"final\":\"196\"}"}
+{"id": "item-0023", "model": "gpt52_codex", "final": "196", "raw": "{\"final\":\"196\"}"}
+{"id": "item-0023", "model": "gpt52", "final": "196", "raw": "{\"final\":196}"}
+{"id": "item-0024", "model": "opus", "final": "67", "raw": "```json\n{\"final\": 67}\n```"}
+{"id": "item-0024", "model": "sonnet_tgt", "final": "67", "raw": "```json\n{\n  \"final\": 67\n}\n```"}
+{"id": "item-0024", "model": "haiku", "final": "67", "raw": "```json\n{\n  \"final\": 67\n}\n```"}
+{"id": "item-0024", "model": "gpt5_codex", "final": "67", "raw": "{\"final\":\"67\"}"}
+{"id": "item-0024", "model": "gpt52_codex", "final": "67", "raw": "{\"final\":\"67\"}"}
+{"id": "item-0024", "model": "gpt52", "final": "67", "raw": "{\"final\":\"67\"}"}
+{"id": "item-0025", "model": "opus", "final": "48", "raw": "{\"final\": 48}"}
+{"id": "item-0025", "model": "sonnet_tgt", "final": "48", "raw": "```json\n{\n  \"final\": 48\n}\n```"}
+{"id": "item-0025", "model": "haiku", "final": "48", "raw": "```json\n{\n  \"final\": 48\n}\n```"}
+{"id": "item-0025", "model": "gpt5_codex", "final": "48", "raw": "{\"final\":\"48\"}"}
+{"id": "item-0025", "model": "gpt52_codex", "final": "48", "raw": "{\"final\":\"48\"}"}
+{"id": "item-0025", "model": "gpt52", "final": "48", "raw": "{\"final\":\"48\"}"}
+{"id": "item-0026", "model": "opus", "final": "240", "raw": "{\"final\": 240}"}
+{"id": "item-0026", "model": "sonnet_tgt", "final": "240", "raw": "```json\n{\n  \"final\": 240\n}\n```"}
+{"id": "item-0026", "model": "haiku", "final": "240", "raw": "```json\n{\n  \"final\": 240\n}\n```\n\nThe calculation is straightforward: 24 rows × 10 trees per row = 240 trees total."}
+{"id": "item-0026", "model": "gpt5_codex", "final": "240", "raw": "{\"final\":\"240\"}"}
+{"id": "item-0026", "model": "gpt52_codex", "final": "The farmer has 240 trees in total.", "raw": "{\"final\":\"The farmer has 240 trees in total.\"}"}
+{"id": "item-0026", "model": "gpt52", "final": "240", "raw": "{\"final\":240}"}
+{"id": "item-0027", "model": "opus", "final": "17", "raw": "```json\n{\"final\": 17}\n```"}
+{"id": "item-0027", "model": "sonnet_tgt", "final": "17", "raw": "```json\n{\n  \"final\": 17\n}\n```"}
+{"id": "item-0027", "model": "haiku", "final": "17", "raw": "```json\n{\n  \"final\": 17\n}\n```"}
+{"id": "item-0027", "model": "gpt5_codex", "final": "17", "raw": "{\"final\":\"17\"}"}
+{"id": "item-0027", "model": "gpt52_codex", "final": "17", "raw": "{\"final\":\"17\"}"}
+{"id": "item-0027", "model": "gpt52", "final": "17", "raw": "{\"final\":17}"}
+{"id": "item-0028", "model": "opus", "final": "58", "raw": "{\"final\": 58}"}
+{"id": "item-0028", "model": "sonnet_tgt", "final": "58", "raw": "I need to solve this math problem step by step.\n\nGiven:\n- Morning cakes: 19\n- Afternoon cakes: 10\n- Each cake is cut into: 2 slices\n\nSolution:\n1. Total cakes = 19 + 10 = 29 cakes\n2. Total slices = 29 cakes × 2 slices per cake = 58 slices\n\n```json\n{\"final\": 58}\n```"}
+{"id": "item-0028", "model": "haiku", "final": "The bakery makes 19 + 10 = 29 cakes in total. If each cake is cut into 2 slices, then 29 × 2 = 58 slices in total.", "raw": "```json\n{\n  \"final\": \"The bakery makes 19 + 10 = 29 cakes in total. If each cake is cut into 2 slices, then 29 × 2 = 58 slices in total.\"\n}\n```"}
+{"id": "item-0028", "model": "gpt5_codex", "final": "58", "raw": "{\"final\":\"58\"}"}
+{"id": "item-0028", "model": "gpt52_codex", "final": "58", "raw": "{\"final\":\"58\"}"}
+{"id": "item-0028", "model": "gpt52", "final": "The bakery makes 29 cakes total (19 + 10). Each cake has 2 slices, so there are 58 slices in total (29 × 2).", "raw": "{\"final\":\"The bakery makes 29 cakes total (19 + 10). Each cake has 2 slices, so there are 58 slices in total (29 × 2).\"}"}
+{"id": "item-0029", "model": "opus", "final": "61", "raw": "{\"final\": 61}"}
+{"id": "item-0029", "model": "sonnet_tgt", "final": "61", "raw": "I need to solve this math problem and return the answer in JSON format.\n\nLet me calculate:\n- Total cookies initially: 11 packs × 7 cookies/pack = 77 cookies\n- Cookies eaten: 16 cookies\n- Cookies remaining: 77 - 16 = 61 cookies\n\n```json\n{\"final\": 61}\n```"}
+{"id": "item-0029", "model": "haiku", "final": "61", "raw": "I need to solve this math problem.\n\nLet me break it down:\n- Number of packs: 11\n- Cookies per pack: 7\n- Total cookies: 11 × 7 = 77\n- Cookies eaten: 16\n- Cookies remaining: 77 - 16 = 61\n\n```json\n{\n  \"final\": 61\n}\n```"}
+{"id": "item-0029", "model": "gpt5_codex", "final": "61", "raw": "{\"final\":\"61\"}"}
+{"id": "item-0029", "model": "gpt52_codex", "final": "61", "raw": "{\"final\":\"61\"}"}
+{"id": "item-0029", "model": "gpt52", "final": "There are 61 cookies remaining.", "raw": "{\"final\":\"There are 61 cookies remaining.\"}"}
+{"id": "item-0030", "model": "opus", "final": "38", "raw": "{\"final\": 38}"}
+{"id": "item-0030", "model": "sonnet_tgt", "final": "38", "raw": "```json\n{\n  \"final\": 38\n}\n```"}
+{"id": "item-0030", "model": "haiku", "final": "38", "raw": "```json\n{\n  \"final\": 38\n}\n```"}
+{"id": "item-0030", "model": "gpt5_codex", "final": "38", "raw": "{\"final\":\"38\"}"}
+{"id": "item-0030", "model": "gpt52_codex", "final": "38", "raw": "{\"final\":\"38\"}"}
+{"id": "item-0030", "model": "gpt52", "final": "38", "raw": "{\"final\":\"38\"}"}
+{"id": "item-0031", "model": "opus", "final": "58", "raw": "{\"final\": 58}"}
+{"id": "item-0031", "model": "sonnet_tgt", "final": "58", "raw": "```json\n{\n  \"final\": 58\n}\n```"}
+{"id": "item-0031", "model": "haiku", "final": "58", "raw": "```json\n{\n  \"final\": 58\n}\n```\n\nThe calculation is: 99 - 41 = 58 books remain in the library."}
+{"id": "item-0031", "model": "gpt5_codex", "final": "58", "raw": "{\"final\":\"58\"}"}
+{"id": "item-0031", "model": "gpt52_codex", "final": "58", "raw": "{\"final\":\"58\"}"}
+{"id": "item-0031", "model": "gpt52", "final": "58", "raw": "{\"final\":58}"}
+{"id": "item-0032", "model": "opus", "final": "468", "raw": "```json\n{\"final\": 468}\n```"}
+{"id": "item-0032", "model": "sonnet_tgt", "final": "468", "raw": "I need to solve a simple multiplication problem and return the answer in JSON format.\n\nThe farmer has:\n- 18 rows of trees\n- 26 trees in each row\n\nTotal trees = 18 × 26 = 468\n\n```json\n{\"final\": 468}\n```"}
+{"id": "item-0032", "model": "haiku", "final": "468", "raw": "I need to calculate the total number of trees by multiplying the number of rows by the number of trees per row.\n\n18 rows × 26 trees per row = 468 trees\n\n```json\n{\n  \"final\": 468\n}\n```"}
+{"id": "item-0032", "model": "gpt5_codex", "final": "468", "raw": "{\"final\":\"468\"}"}
+{"id": "item-0032", "model": "gpt52_codex", "final": "468", "raw": "{\"final\":\"468\"}"}
+{"id": "item-0032", "model": "gpt52", "final": "468", "raw": "{\"final\":\"468\"}"}
+{"id": "item-0033", "model": "opus", "final": "6", "raw": "```json\n{\"final\": 6}\n```"}
+{"id": "item-0033", "model": "sonnet_tgt", "final": "6", "raw": "```json\n{\n  \"final\": 6\n}\n```"}
+{"id": "item-0033", "model": "haiku", "final": "6", "raw": "```json\n{\n  \"final\": 6\n}\n```"}
+{"id": "item-0033", "model": "gpt5_codex", "final": "6", "raw": "{\"final\":\"6\"}"}
+{"id": "item-0033", "model": "gpt52_codex", "final": "6", "raw": "{\"final\":\"6\"}"}
+{"id": "item-0033", "model": "gpt52", "final": "6", "raw": "{\"final\":\"6\"}"}
+{"id": "item-0034", "model": "opus", "final": "152", "raw": "```json\n{\"final\": 152}\n```"}
+{"id": "item-0034", "model": "sonnet_tgt", "final": "152", "raw": "```json\n{\n  \"final\": 152\n}\n```"}
+{"id": "item-0034", "model": "haiku", "final": "152", "raw": "I need to solve this math problem and return the result as JSON.\n\nLet me calculate:\n- Morning cakes: 10\n- Afternoon cakes: 9\n- Total cakes: 10 + 9 = 19\n- Slices per cake: 8\n- Total slices: 19 × 8 = 152\n\n```json\n{\n  \"final\": 152\n}\n```"}
+{"id": "item-0034", "model": "gpt5_codex", "final": "152", "raw": "{\"final\":\"152\"}"}
+{"id": "item-0034", "model": "gpt52_codex", "final": "152", "raw": "{\"final\":\"152\"}"}
+{"id": "item-0034", "model": "gpt52", "final": "152", "raw": "{\"final\":152}"}
+{"id": "item-0035", "model": "opus", "final": "153", "raw": "{\"final\": 153}"}
+{"id": "item-0035", "model": "sonnet_tgt", "final": "153", "raw": "I need to solve this math problem and return the answer in JSON format.\n\nLet me calculate:\n- Total cookies initially: 15 packs × 12 cookies/pack = 180 cookies\n- Cookies eaten: 27 cookies\n- Cookies remaining: 180 - 27 = 153 cookies\n\n```json\n{\"final\": 153}\n```"}
+{"id": "item-0035", "model": "haiku", "final": "153", "raw": "I need to solve this math problem and return the result as JSON.\n\nLet me calculate:\n- Total cookies: 15 packs × 12 cookies per pack = 180 cookies\n- Cookies eaten: 27\n- Remaining cookies: 180 - 27 = 153\n\n```json\n{\n  \"final\": 153\n}\n```"}
+{"id": "item-0035", "model": "gpt5_codex", "final": "153", "raw": "{\"final\":\"153\"}"}
+{"id": "item-0035", "model": "gpt52_codex", "final": "153", "raw": "{\"final\":153}"}
+{"id": "item-0035", "model": "gpt52", "final": "153", "raw": "{\"final\":153}"}
+{"id": "item-0036", "model": "opus", "final": "36", "raw": "{\"final\": 36}"}
+{"id": "item-0036", "model": "sonnet_tgt", "final": "36", "raw": "```json\n{\n  \"final\": 36\n}\n```"}
+{"id": "item-0036", "model": "haiku", "final": "36", "raw": "```json\n{\n  \"final\": 36\n}\n```"}
+{"id": "item-0036", "model": "gpt5_codex", "final": "36", "raw": "{\"final\":\"36\"}"}
+{"id": "item-0036", "model": "gpt52_codex", "final": "36", "raw": "{\"final\": 36}"}
+{"id": "item-0036", "model": "gpt52", "final": "36", "raw": "{\"final\":\"36\"}"}
+{"id": "item-0037", "model": "opus", "final": "21", "raw": "{\"final\": 21}"}
+{"id": "item-0037", "model": "sonnet_tgt", "final": "21", "raw": "```json\n{\n  \"final\": 21\n}\n```"}
+{"id": "item-0037", "model": "haiku", "final": "21", "raw": "```json\n{\n  \"final\": 21\n}\n```"}
+{"id": "item-0037", "model": "gpt5_codex", "final": "21", "raw": "{\"final\":\"21\"}"}
+{"id": "item-0037", "model": "gpt52_codex", "final": "21", "raw": "{\"final\":\"21\"}"}
+{"id": "item-0037", "model": "gpt52", "final": "21", "raw": "{\"final\":\"21\"}"}
+{"id": "item-0038", "model": "opus", "final": "780", "raw": "```json\n{\"final\": 780}\n```"}
+{"id": "item-0038", "model": "sonnet_tgt", "final": "780", "raw": "I need to calculate the total number of trees by multiplying the number of rows by the number of trees per row.\n\n20 rows × 39 trees per row = 780 trees\n\n```json\n{\n  \"final\": 780\n}\n```"}
+{"id": "item-0038", "model": "haiku", "final": "780", "raw": "```json\n{\n  \"final\": 780\n}\n```\n\nThe calculation is: 20 rows × 39 trees per row = 780 trees total."}
+{"id": "item-0038", "model": "gpt5_codex", "final": "780", "raw": "{\"final\":\"780\"}"}
+{"id": "item-0038", "model": "gpt52_codex", "final": "780", "raw": "{\"final\":780}"}
+{"id": "item-0038", "model": "gpt52", "final": "The farmer has 780 trees in total.", "raw": "{\"final\":\"The farmer has 780 trees in total.\"}"}
+{"id": "item-0039", "model": "opus", "final": "20", "raw": "```json\n{\"final\": 20}\n```"}
+{"id": "item-0039", "model": "sonnet_tgt", "final": "20", "raw": "```json\n{\n  \"final\": 20\n}\n```"}
+{"id": "item-0039", "model": "haiku", "final": "20", "raw": "```json\n{\n  \"final\": 20\n}\n```"}
+{"id": "item-0039", "model": "gpt5_codex", "final": "20", "raw": "{\"final\":20}"}
+{"id": "item-0039", "model": "gpt52_codex", "final": "Each student gets 20 pencils.", "raw": "{\"final\":\"Each student gets 20 pencils.\"}"}
+{"id": "item-0039", "model": "gpt52", "final": "20", "raw": "{\"final\":\"20\"}"}
+{"id": "item-0040", "model": "opus", "final": "196", "raw": "{\"final\": 196}"}
+{"id": "item-0040", "model": "sonnet_tgt", "final": "196", "raw": "I need to solve this math problem step by step:\n\n1. Total cakes made = morning cakes + afternoon cakes = 13 + 15 = 28 cakes\n2. Each cake is cut into 7 slices\n3. Total slices = total cakes × slices per cake = 28 × 7 = 196 slices\n\n```json\n{\"final\": 196}\n```"}
+{"id": "item-0040", "model": "haiku", "final": "196", "raw": "I need to solve this math problem and return the result as JSON.\n\nLet me calculate:\n\n1. **Cakes made in the morning:** 13 cakes\n2. **Cakes made in the afternoon:** 15 cakes\n3. **Total cakes:** 13 + 15 = 28 cakes\n4. **Slices per cake:** 7 slices\n5. **Total slices:** 28 × 7 = 196 slices\n\n```json\n{\n  \"final\": 196\n}\n```"}
+{"id": "item-0040", "model": "gpt5_codex", "final": "196", "raw": "{\"final\":\"196\"}"}
+{"id": "item-0040", "model": "gpt52_codex", "final": "196", "raw": "{\"final\":\"196\"}"}
+{"id": "item-0040", "model": "gpt52", "final": "196", "raw": "{\"final\":196}"}
+{"id": "item-0041", "model": "opus", "final": "52", "raw": "{\"final\": 52}"}
+{"id": "item-0041", "model": "sonnet_tgt", "final": "52", "raw": "I'll solve this step by step.\n\nGiven:\n- 12 packs of cookies\n- 6 cookies per pack\n- 20 cookies are eaten\n\nCalculation:\n1. Total cookies initially = 12 packs × 6 cookies/pack = 72 cookies\n2. Cookies remaining = 72 - 20 = 52 cookies\n\n```json\n{\n  \"final\": 52\n}\n```"}
+{"id": "item-0041", "model": "haiku", "final": "52", "raw": "I need to solve this step-by-step.\n\nLet me calculate:\n1. Total cookies in the box: 12 packs × 6 cookies per pack = 72 cookies\n2. Cookies eaten: 20 cookies\n3. Cookies remaining: 72 - 20 = 52 cookies\n\n```json\n{\n  \"final\": 52\n}\n```"}
+{"id": "item-0041", "model": "gpt5_codex", "final": "52", "raw": "{\"final\":\"52\"}"}
+{"id": "item-0041", "model": "gpt52_codex", "final": "52", "raw": "{\"final\":\"52\"}"}
+{"id": "item-0041", "model": "gpt52", "final": "52", "raw": "{\"final\":\"52\"}"}
+{"id": "item-0042", "model": "opus", "final": "82", "raw": "{\"final\": 82}"}
+{"id": "item-0042", "model": "sonnet_tgt", "final": "82", "raw": "```json\n{\n  \"final\": 82\n}\n```"}
+{"id": "item-0042", "model": "haiku", "final": "82", "raw": "I need to solve this simple arithmetic problem.\n\nThe store starts with 48 apples and receives 34 more apples.\n\nTotal apples = 48 + 34 = 82\n\n```json\n{\n  \"final\": 82\n}\n```"}
+{"id": "item-0042", "model": "gpt5_codex", "final": "82", "raw": "{\"final\":\"82\"}"}
+{"id": "item-0042", "model": "gpt52_codex", "final": "82", "raw": "{\"final\":\"82\"}"}
+{"id": "item-0042", "model": "gpt52", "final": "82", "raw": "{\"final\":82}"}
+{"id": "item-0043", "model": "opus", "final": "3", "raw": "{\"final\": 3}"}
+{"id": "item-0043", "model": "sonnet_tgt", "final": "3", "raw": "```json\n{\n  \"final\": 3\n}\n```"}
+{"id": "item-0043", "model": "haiku", "final": "3", "raw": "```json\n{\n  \"final\": 3\n}\n```"}
+{"id": "item-0043", "model": "gpt5_codex", "final": "3", "raw": "{\"final\":\"3\"}"}
+{"id": "item-0043", "model": "gpt52_codex", "final": "3", "raw": "{\"final\":\"3\"}"}
+{"id": "item-0043", "model": "gpt52", "final": "3", "raw": "{\"final\":3}"}
+{"id": "item-0044", "model": "opus", "final": "924", "raw": "{\"final\": 924}"}
+{"id": "item-0044", "model": "sonnet_tgt", "final": "924", "raw": "I need to calculate the total number of trees by multiplying the number of rows by the number of trees per row.\n\n22 rows × 42 trees per row = 924 trees\n\n```json\n{\n  \"final\": 924\n}\n```"}
+{"id": "item-0044", "model": "haiku", "final": "924", "raw": "I need to solve this math problem and return the result as JSON.\n\nLet me calculate: 22 rows × 42 trees per row = 924 trees\n\n```json\n{\n  \"final\": 924\n}\n```"}
+{"id": "item-0044", "model": "gpt5_codex", "final": "924", "raw": "{\"final\":\"924\"}"}
+{"id": "item-0044", "model": "gpt52_codex", "final": "924", "raw": "{\"final\":\"924\"}"}
+{"id": "item-0044", "model": "gpt52", "final": "924", "raw": "{\"final\":\"924\"}"}
+{"id": "item-0045", "model": "opus", "final": "8", "raw": "{\"final\": 8}"}
+{"id": "item-0045", "model": "sonnet_tgt", "final": "8", "raw": "```json\n{\n  \"final\": 8\n}\n```"}
+{"id": "item-0045", "model": "haiku", "final": "8", "raw": "```json\n{\n  \"final\": 8\n}\n```\n\nThe calculation is straightforward: 48 pencils ÷ 6 students = 8 pencils per student."}
+{"id": "item-0045", "model": "gpt5_codex", "final": "8", "raw": "{\"final\":\"8\"}"}
+{"id": "item-0045", "model": "gpt52_codex", "final": "8", "raw": "{\"final\":\"8\"}"}
+{"id": "item-0045", "model": "gpt52", "final": "8", "raw": "{\"final\":\"8\"}"}
+{"id": "item-0046", "model": "opus", "final": "110", "raw": "{\"final\": 110}"}
+{"id": "item-0046", "model": "sonnet_tgt", "final": "110", "raw": "Let me solve this step by step:\n\n1. Total cakes made = morning cakes + afternoon cakes = 17 + 5 = 22 cakes\n2. Each cake is cut into 5 slices\n3. Total slices = 22 cakes × 5 slices per cake = 110 slices\n\n```json\n{\"final\": 110}\n```"}
+{"id": "item-0046", "model": "haiku", "final": "110", "raw": "I need to solve this math problem step by step.\n\nLet me break it down:\n1. Morning cakes: 17\n2. Afternoon cakes: 5\n3. Total cakes: 17 + 5 = 22\n4. Slices per cake: 5\n5. Total slices: 22 × 5 = 110\n\n```json\n{\n  \"final\": 110\n}\n```"}
+{"id": "item-0046", "model": "gpt5_codex", "final": "110", "raw": "{\"final\":\"110\"}"}
+{"id": "item-0046", "model": "gpt52_codex", "final": "110", "raw": "{\"final\":\"110\"}"}
+{"id": "item-0046", "model": "gpt52", "final": "110", "raw": "{\"final\":\"110\"}"}
+{"id": "item-0047", "model": "opus", "final": "36", "raw": "{\"final\": 36}"}
+{"id": "item-0047", "model": "sonnet_tgt", "final": "36", "raw": "I need to solve this math problem and return the result as JSON.\n\nLet me calculate:\n- Initial cookies: 12 packs × 5 cookies per pack = 60 cookies\n- Cookies eaten: 24 cookies\n- Cookies remaining: 60 - 24 = 36 cookies\n\n```json\n{\"final\": 36}\n```"}
+{"id": "item-0047", "model": "haiku", "final": "36", "raw": "I need to solve this step-by-step:\n\n1. Total cookies in the box: 12 packs × 5 cookies per pack = 60 cookies\n2. Cookies eaten: 24 cookies\n3. Cookies remaining: 60 - 24 = 36 cookies\n\n```json\n{\n  \"final\": 36\n}\n```"}
+{"id": "item-0047", "model": "gpt5_codex", "final": "36", "raw": "{\"final\":\"36\"}"}
+{"id": "item-0047", "model": "gpt52_codex", "final": "36", "raw": "{\"final\":\"36\"}"}
+{"id": "item-0047", "model": "gpt52", "final": "36", "raw": "{\"final\":\"36\"}"}
+{"id": "item-0048", "model": "opus", "final": "61", "raw": "{\"final\": 61}"}
+{"id": "item-0048", "model": "sonnet_tgt", "final": "61", "raw": "```json\n{\n  \"final\": 61\n}\n```"}
+{"id": "item-0048", "model": "haiku", "final": "61", "raw": "```json\n{\n  \"final\": 61\n}\n```"}
+{"id": "item-0048", "model": "gpt5_codex", "final": "61", "raw": "{\"final\":\"61\"}"}
+{"id": "item-0048", "model": "gpt52_codex", "final": "61", "raw": "{\"final\":\"61\"}"}
+{"id": "item-0048", "model": "gpt52", "final": "61", "raw": "{\"final\":\"61\"}"}
+{"id": "item-0049", "model": "opus", "final": "25", "raw": "{\"final\": 25}"}
+{"id": "item-0049", "model": "sonnet_tgt", "final": "25", "raw": "```json\n{\n  \"final\": 25\n}\n```"}
+{"id": "item-0049", "model": "haiku", "final": "25", "raw": "```json\n{\n  \"final\": 25\n}\n```\n\nThe calculation is: 48 books - 23 books checked out = 25 books remaining in the library."}
+{"id": "item-0049", "model": "gpt5_codex", "final": "25", "raw": "{\"final\":\"25\"}"}
+{"id": "item-0049", "model": "gpt52_codex", "final": "25", "raw": "{\"final\":\"25\"}"}
+{"id": "item-0049", "model": "gpt52", "final": "25", "raw": "{\"final\":\"25\"}"}
+{"id": "item-0050", "model": "opus", "final": "960", "raw": "{\"final\": 960}"}
+{"id": "item-0050", "model": "sonnet_tgt", "final": "960", "raw": "I need to solve this mathematical problem and return the answer in JSON format.\n\nThe calculation is straightforward:\n- 24 rows of trees\n- 40 trees in each row\n- Total trees = 24 × 40 = 960\n\n```json\n{\"final\": 960}\n```"}
+{"id": "item-0050", "model": "haiku", "final": "960", "raw": "```json\n{\n  \"final\": 960\n}\n```\n\nThe farmer has 24 rows × 40 trees per row = 960 trees in total."}
+{"id": "item-0050", "model": "gpt5_codex", "final": "960", "raw": "{\"final\":\"960\"}"}
+{"id": "item-0050", "model": "gpt52_codex", "final": "960", "raw": "{\"final\":\"960\"}"}
+{"id": "item-0050", "model": "gpt52", "final": "960", "raw": "{\"final\":960}"}
+{"id": "item-0051", "model": "opus", "final": "14", "raw": "```json\n{\"final\": 14}\n```"}
+{"id": "item-0051", "model": "sonnet_tgt", "final": "14", "raw": "```json\n{\n  \"final\": 14\n}\n```"}
+{"id": "item-0051", "model": "haiku", "final": "Each student gets 14 pencils. (70 ÷ 5 = 14)", "raw": "```json\n{\n  \"final\": \"Each student gets 14 pencils. (70 ÷ 5 = 14)\"\n}\n```"}
+{"id": "item-0051", "model": "gpt5_codex", "final": "Each student gets 14 pencils.", "raw": "{\"final\":\"Each student gets 14 pencils.\"}"}
+{"id": "item-0051", "model": "gpt52_codex", "final": "14", "raw": "{\"final\":\"14\"}"}
+{"id": "item-0051", "model": "gpt52", "final": "14", "raw": "{\"final\":14}"}
+{"id": "item-0052", "model": "opus", "final": "50", "raw": "{\"final\": 50}"}
+{"id": "item-0052", "model": "sonnet_tgt", "final": "50", "raw": "I need to solve this math problem step by step:\n\n1. Morning cakes: 7\n2. Afternoon cakes: 18\n3. Total cakes: 7 + 18 = 25\n4. Each cake is cut into 2 slices\n5. Total slices: 25 × 2 = 50\n\n```json\n{\"final\": 50}\n```"}
+{"id": "item-0052", "model": "haiku", "final": "The bakery makes 7 + 18 = 25 cakes total. Each cake is cut into 2 slices, so 25 × 2 = 50 slices in total.", "raw": "```json\n{\n  \"final\": \"The bakery makes 7 + 18 = 25 cakes total. Each cake is cut into 2 slices, so 25 × 2 = 50 slices in total.\"\n}\n```"}
+{"id": "item-0052", "model": "gpt5_codex", "final": "50", "raw": "{\"final\":\"50\"}"}
+{"id": "item-0052", "model": "gpt52_codex", "final": "50", "raw": "{\"final\":\"50\"}"}
+{"id": "item-0052", "model": "gpt52", "final": "The bakery makes 25 cakes total, and each cake has 2 slices, so there are 50 slices in total.", "raw": "{\"final\":\"The bakery makes 25 cakes total, and each cake has 2 slices, so there are 50 slices in total.\"}"}
+{"id": "item-0053", "model": "opus", "final": "61", "raw": "{\"final\": 61}"}
+{"id": "item-0053", "model": "sonnet_tgt", "final": "61", "raw": "I need to solve this math problem and return the answer in JSON format.\n\nLet me calculate:\n- Initial cookies: 8 packs × 11 cookies per pack = 88 cookies\n- Cookies eaten: 27 cookies\n- Cookies remaining: 88 - 27 = 61 cookies\n\n```json\n{\"final\": 61}\n```"}
+{"id": "item-0053", "model": "haiku", "final": "61", "raw": "I need to solve this math problem.\n\nLet me calculate:\n- Total cookies: 8 packs × 11 cookies per pack = 88 cookies\n- Cookies eaten: 27\n- Cookies remaining: 88 - 27 = 61 cookies\n\n```json\n{\n  \"final\": 61\n}\n```"}
+{"id": "item-0053", "model": "gpt5_codex", "final": "61", "raw": "{\"final\":\"61\"}"}
+{"id": "item-0053", "model": "gpt52_codex", "final": "61", "raw": "{\"final\":\"61\"}"}
+{"id": "item-0053", "model": "gpt52", "final": "There are 61 cookies remaining.", "raw": "{\"final\":\"There are 61 cookies remaining.\"}"}
+{"id": "item-0054", "model": "opus", "final": "62", "raw": "{\"final\": 62}"}
+{"id": "item-0054", "model": "sonnet_tgt", "final": "62", "raw": "```json\n{\n  \"final\": 62\n}\n```"}
+{"id": "item-0054", "model": "haiku", "final": "62", "raw": "```json\n{\n  \"final\": 62\n}\n```"}
+{"id": "item-0054", "model": "gpt5_codex", "final": "The store has 62 apples now.", "raw": "{\"final\":\"The store has 62 apples now.\"}"}
+{"id": "item-0054", "model": "gpt52_codex", "final": "62", "raw": "{\"final\":\"62\"}"}
+{"id": "item-0054", "model": "gpt52", "final": "62", "raw": "{\"final\":62}"}
+{"id": "item-0055", "model": "opus", "final": "21", "raw": "{\"final\": 21}"}
+{"id": "item-0055", "model": "sonnet_tgt", "final": "21", "raw": "```json\n{\n  \"final\": 21\n}\n```"}
+{"id": "item-0055", "model": "haiku", "final": "21", "raw": "```json\n{\n  \"final\": 21\n}\n```"}
+{"id": "item-0055", "model": "gpt5_codex", "final": "21", "raw": "{\"final\":\"21\"}"}
+{"id": "item-0055", "model": "gpt52_codex", "final": "21", "raw": "{\"final\":\"21\"}"}
+{"id": "item-0055", "model": "gpt52", "final": "21", "raw": "{\"final\":21}"}
+{"id": "item-0056", "model": "opus", "final": "738", "raw": "{\"final\": 738}"}
+{"id": "item-0056", "model": "sonnet_tgt", "final": "738", "raw": "```json\n{\n  \"final\": 738\n}\n```"}
+{"id": "item-0056", "model": "haiku", "final": "738", "raw": "```json\n{\n  \"final\": 738\n}\n```\n\nThe calculation is straightforward: 41 rows × 18 trees per row = 738 trees total."}
+{"id": "item-0056", "model": "gpt5_codex", "final": "738", "raw": "{\"final\":\"738\"}"}
+{"id": "item-0056", "model": "gpt52_codex", "final": "738", "raw": "{\"final\":\"738\"}"}
+{"id": "item-0056", "model": "gpt52", "final": "738", "raw": "{\"final\":738}"}
+{"id": "item-0057", "model": "opus", "final": "14", "raw": "```json\n{\"final\": 14}\n```"}
+{"id": "item-0057", "model": "sonnet_tgt", "final": "14", "raw": "```json\n{\n  \"final\": 14\n}\n```"}
+{"id": "item-0057", "model": "haiku", "final": "14", "raw": "I need to solve this simple division problem.\n\n112 pencils ÷ 8 students = 14 pencils per student\n\n```json\n{\n  \"final\": 14\n}\n```"}
+{"id": "item-0057", "model": "gpt5_codex", "final": "14", "raw": "{\"final\":\"14\"}"}
+{"id": "item-0057", "model": "gpt52_codex", "final": "14", "raw": "{\"final\":\"14\"}"}
+{"id": "item-0057", "model": "gpt52", "final": "14", "raw": "{\"final\":\"14\"}"}
+{"id": "item-0058", "model": "opus", "final": "153", "raw": "{\"final\": 153}"}
+{"id": "item-0058", "model": "sonnet_tgt", "final": "153", "raw": "I need to solve this step by step:\n\n1. Total cakes made = 12 (morning) + 5 (afternoon) = 17 cakes\n2. Each cake is cut into 9 slices\n3. Total slices = 17 cakes × 9 slices per cake = 153 slices\n\n```json\n{\n  \"final\": 153\n}\n```"}
+{"id": "item-0058", "model": "haiku", "final": "153", "raw": "I need to calculate the total number of slices.\n\nLet me break this down:\n- Morning cakes: 12\n- Afternoon cakes: 5\n- Total cakes: 12 + 5 = 17\n- Slices per cake: 9\n- Total slices: 17 × 9 = 153\n\n```json\n{\n  \"final\": 153\n}\n```"}
+{"id": "item-0058", "model": "gpt5_codex", "final": "153", "raw": "{\"final\":153}"}
+{"id": "item-0058", "model": "gpt52_codex", "final": "153", "raw": "{\"final\":\"153\"}"}
+{"id": "item-0058", "model": "gpt52", "final": "153", "raw": "{\"final\":153}"}
+{"id": "item-0059", "model": "opus", "final": "61", "raw": "{\"final\": 61}"}
+{"id": "item-0059", "model": "sonnet_tgt", "final": "61", "raw": "I need to solve this simple arithmetic problem and return the answer in JSON format.\n\nLet me calculate:\n- Total cookies initially: 5 packs × 14 cookies per pack = 70 cookies\n- Cookies eaten: 9 cookies\n- Cookies remaining: 70 - 9 = 61 cookies\n\n```json\n{\"final\": 61}\n```"}
+{"id": "item-0059", "model": "haiku", "final": "61", "raw": "I need to solve this math problem:\n\n1. Total cookies initially: 5 packs × 14 cookies per pack = 70 cookies\n2. Cookies eaten: 9\n3. Cookies remaining: 70 - 9 = 61 cookies\n\n```json\n{\n  \"final\": 61\n}\n```"}
+{"id": "item-0059", "model": "gpt5_codex", "final": "61", "raw": "{\"final\":\"61\"}"}
+{"id": "item-0059", "model": "gpt52_codex", "final": "61", "raw": "{\"final\":\"61\"}"}
+{"id": "item-0059", "model": "gpt52", "final": "61", "raw": "{\"final\":\"61\"}"}

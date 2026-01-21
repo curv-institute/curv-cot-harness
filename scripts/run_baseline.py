@@ -96,15 +96,17 @@ def call_model(model: str, prompt: str, temperature: float = 0.0) -> str:
     """Call a model and return the response text.
 
     For Claude models: uses Claude CLI (which has built-in auth)
+    For GPT/OpenAI models: uses Codex CLI (with ChatGPT auth)
     For other models: uses litellm (requires API keys in environment)
 
     Model identifiers:
     - Claude CLI: "sonnet", "haiku", "opus" (or full names like "claude-3-5-sonnet-latest")
-    - OpenAI via litellm: "gpt-4.1", "gpt-4.1-mini", "gpt-4o"
+    - Codex CLI: "gpt-5-codex", or any model starting with "gpt-"
+    - Other via litellm: requires OPENAI_API_KEY or other provider keys
 
-    Requires:
-    - Claude CLI installed and authenticated for Claude models
-    - OPENAI_API_KEY for OpenAI models
+    Environment variables:
+    - CLAUDE_CMD: path to claude CLI (default: "claude")
+    - CODEX_CMD: path to codex CLI (default: "/home/jwm/.bun/bin/codex")
     """
     # Use Claude CLI for Claude/Anthropic models
     if "claude" in model.lower() or model.lower() in ("sonnet", "haiku", "opus"):
@@ -133,7 +135,30 @@ def call_model(model: str, prompt: str, temperature: float = 0.0) -> str:
             )
         return proc.stdout.strip()
 
-    # Use litellm for other models (OpenAI, etc.)
+    # Use Codex CLI for GPT/OpenAI models
+    if model.lower().startswith("gpt-") or "codex" in model.lower():
+        cmd = os.environ.get("CODEX_CMD", "/home/jwm/.bun/bin/codex")
+        # For gpt-5-codex (default), don't pass model flag
+        if model.lower() == "gpt-5-codex":
+            args = [cmd, "exec", "-"]
+        else:
+            args = [cmd, "exec", "-m", model, "-"]
+
+        proc = subprocess.run(
+            args,
+            input=prompt,
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        if proc.returncode != 0:
+            raise RuntimeError(
+                f"Codex CLI call failed (model={model})\n"
+                f"STDOUT:\n{proc.stdout}\n\nSTDERR:\n{proc.stderr}"
+            )
+        return proc.stdout.strip()
+
+    # Use litellm for other models
     response = litellm.completion(
         model=model,
         messages=[{"role": "user", "content": prompt}],

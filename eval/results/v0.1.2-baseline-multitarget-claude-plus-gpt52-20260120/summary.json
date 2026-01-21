@@ -1,0 +1,76 @@
+{
+  "run_name": "v0.1.2-baseline-multitarget-claude-plus-gpt52-20260120",
+  "dataset": "eval/datasets/arithmetic-60.jsonl",
+  "n_items": 60,
+  "git": {
+    "commit": "e1a8603c654c",
+    "tag": "e1a8603"
+  },
+  "proposer": {
+    "model": "sonnet",
+    "temperature": 0.0,
+    "accuracy": 1.0
+  },
+  "targets": [
+    {
+      "name": "opus",
+      "model": "opus"
+    },
+    {
+      "name": "sonnet_tgt",
+      "model": "sonnet"
+    },
+    {
+      "name": "haiku",
+      "model": "haiku"
+    },
+    {
+      "name": "gpt5_codex",
+      "model": "gpt-5-codex"
+    },
+    {
+      "name": "gpt52_codex",
+      "model": "gpt-5.2-codex"
+    },
+    {
+      "name": "gpt52",
+      "model": "gpt-5.2"
+    }
+  ],
+  "agreement_rate": {
+    "with_trace": 0.9688888888888889,
+    "no_trace": 0.888888888888889
+  },
+  "agree_all_counts": {
+    "agree_on_correct_with_trace": 55,
+    "agree_on_wrong_with_trace": 0,
+    "agree_on_correct_no_trace": 44,
+    "agree_on_wrong_no_trace": 0
+  },
+  "accuracy": {
+    "with_trace": {
+      "opus": 1.0,
+      "sonnet_tgt": 1.0,
+      "haiku": 0.9833333333333333,
+      "gpt5_codex": 1.0,
+      "gpt52_codex": 0.9666666666666667,
+      "gpt52": 0.95
+    },
+    "no_trace": {
+      "opus": 1.0,
+      "sonnet_tgt": 1.0,
+      "haiku": 0.8833333333333333,
+      "gpt5_codex": 0.95,
+      "gpt52_codex": 0.95,
+      "gpt52": 0.8666666666666667
+    },
+    "transfer_gain": {
+      "opus": 0.0,
+      "sonnet_tgt": 0.0,
+      "haiku": 0.09999999999999998,
+      "gpt5_codex": 0.050000000000000044,
+      "gpt52_codex": 0.01666666666666672,
+      "gpt52": 0.08333333333333326
+    }
+  }
+}
