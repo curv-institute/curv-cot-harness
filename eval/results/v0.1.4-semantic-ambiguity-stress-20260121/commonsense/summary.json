@@ -1,0 +1,55 @@
+{
+  "family": "commonsense",
+  "n_items": 30,
+  "n_corrupted": 8,
+  "agreement_rate": {
+    "no_trace": 0.0,
+    "uncorrupted_trace": 0.08888888888888888,
+    "corrupted_trace": 0.1
+  },
+  "agree_all_counts": {
+    "no_trace": {
+      "correct": 0,
+      "wrong": 0
+    },
+    "uncorrupted_trace": {
+      "correct": 1,
+      "wrong": 0
+    },
+    "corrupted_trace": {
+      "correct": 2,
+      "wrong": 0
+    }
+  },
+  "plurality_wrong": {
+    "no_trace": 21,
+    "uncorrupted_trace": 20,
+    "corrupted_trace": 22
+  },
+  "accuracy": {
+    "no_trace": {
+      "opus": 0.3,
+      "sonnet_tgt": 0.2,
+      "haiku": 0.2
+    },
+    "uncorrupted_trace": {
+      "opus": 0.3333333333333333,
+      "sonnet_tgt": 0.23333333333333334,
+      "haiku": 0.16666666666666666
+    },
+    "corrupted_trace": {
+      "opus": 0.26666666666666666,
+      "sonnet_tgt": 0.23333333333333334,
+      "haiku": 0.23333333333333334
+    }
+  },
+  "corruption_metrics": {
+    "follow_rate_per_model": {
+      "opus": 0.0,
+      "sonnet_tgt": 0.0,
+      "haiku": 0.0
+    },
+    "collapse_rate": 0.0
+  },
+  "disagreement_suppression_count": 0
+}

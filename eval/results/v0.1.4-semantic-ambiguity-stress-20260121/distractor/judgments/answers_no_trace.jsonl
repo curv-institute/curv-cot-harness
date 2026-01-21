@@ -1,0 +1,90 @@
+{"id": "di-001", "model": "opus", "final": "Margaret", "raw": "{\"final\": \"Margaret\"}"}
+{"id": "di-001", "model": "sonnet_tgt", "final": "Margaret", "raw": "```json\n{\n  \"final\": \"Margaret\"\n}\n```"}
+{"id": "di-001", "model": "haiku", "final": "Margaret", "raw": "```json\n{\n  \"final\": \"Margaret\"\n}\n```"}
+{"id": "di-002", "model": "opus", "final": "Spike", "raw": "{\"final\": \"Spike\"}"}
+{"id": "di-002", "model": "sonnet_tgt", "final": "Spike", "raw": "```json\n{\n  \"final\": \"Spike\"\n}\n```"}
+{"id": "di-002", "model": "haiku", "final": "Spike", "raw": "Based on the given information:\n\n- Tom is taller than Jerry\n- Jerry is taller than Spike\n- Therefore: Tom > Jerry > Spike (in terms of height)\n\nThis means Spike is the shortest.\n\n```json\n{\n  \"final\": \"Spike\"\n}\n```"}
+{"id": "di-003", "model": "opus", "final": "red car", "raw": "```json\n{\"final\": \"red car\"}\n```"}
+{"id": "di-003", "model": "sonnet_tgt", "final": "The red car is faster", "raw": "```json\n{\n  \"final\": \"The red car is faster\"\n}\n```"}
+{"id": "di-003", "model": "haiku", "final": "The red car is faster.", "raw": "```json\n{\n  \"final\": \"The red car is faster.\"\n}\n```"}
+{"id": "di-004", "model": "opus", "final": "2", "raw": "```json\n{\"final\": 2}\n```"}
+{"id": "di-004", "model": "sonnet_tgt", "final": "2", "raw": "```json\n{\n  \"final\": 2\n}\n```"}
+{"id": "di-004", "model": "haiku", "final": "2", "raw": "```json\n{\n  \"final\": 2\n}\n```"}
+{"id": "di-005", "model": "opus", "final": "27", "raw": "{\"final\": 27}"}
+{"id": "di-005", "model": "sonnet_tgt", "final": "27", "raw": "```json\n{\n  \"final\": 27\n}\n```"}
+{"id": "di-005", "model": "haiku", "final": "27", "raw": "```json\n{\n  \"final\": 27\n}\n```"}
+{"id": "di-006", "model": "opus", "final": "Apples are cheaper at $2 each compared to oranges at $3 each.", "raw": "{\"final\": \"Apples are cheaper at $2 each compared to oranges at $3 each.\"}"}
+{"id": "di-006", "model": "sonnet_tgt", "final": "apples", "raw": "```json\n{\n  \"final\": \"apples\"\n}\n```"}
+{"id": "di-006", "model": "haiku", "final": "Apples are cheaper at $2 each compared to oranges at $3 each.", "raw": "```json\n{\n  \"final\": \"Apples are cheaper at $2 each compared to oranges at $3 each.\"\n}\n```"}
+{"id": "di-007", "model": "opus", "final": "John", "raw": "```json\n{\"final\": \"John\"}\n```"}
+{"id": "di-007", "model": "sonnet_tgt", "final": "John", "raw": "```json\n{\n  \"final\": \"John\"\n}\n```"}
+{"id": "di-007", "model": "haiku", "final": "John is the fastest runner.", "raw": "```json\n{\n  \"final\": \"John is the fastest runner.\"\n}\n```"}
+{"id": "di-008", "model": "opus", "final": "3:00 PM", "raw": "{\"final\": \"3:00 PM\"}"}
+{"id": "di-008", "model": "sonnet_tgt", "final": "3:00 PM", "raw": "```json\n{\n  \"final\": \"3:00 PM\"\n}\n```"}
+{"id": "di-008", "model": "haiku", "final": "3:00 PM", "raw": "```json\n{\n  \"final\": \"3:00 PM\"\n}\n```"}
+{"id": "di-009", "model": "opus", "final": "Emma", "raw": "{\"final\": \"Emma\"}"}
+{"id": "di-009", "model": "sonnet_tgt", "final": "Emma", "raw": "```json\n{\n  \"final\": \"Emma\"\n}\n```"}
+{"id": "di-009", "model": "haiku", "final": "Emma", "raw": "I need to analyze the given information to determine who is the youngest.\n\nGiven facts:\n1. Lisa is older than Kate\n2. Kate is older than Emma\n3. Lisa enjoys painting\n4. Kate plays tennis every Saturday\n5. Emma's middle name is Rose\n\nFrom facts 1 and 2, I can establish an age ordering:\n- Lisa > Kate (in age)\n- Kate > Emma (in age)\n\nTherefore: Lisa > Kate > Emma\n\nThis means Emma is the youngest.\n\n```json\n{\n  \"final\": \"Emma\"\n}\n```"}
+{"id": "di-010", "model": "opus", "final": "chickens", "raw": "{\"final\": \"chickens\"}"}
+{"id": "di-010", "model": "sonnet_tgt", "final": "chickens", "raw": "```json\n{\n  \"final\": \"chickens\"\n}\n```"}
+{"id": "di-010", "model": "haiku", "final": "Chickens produce the eggs.", "raw": "```json\n{\n  \"final\": \"Chickens produce the eggs.\"\n}\n```"}
+{"id": "di-011", "model": "opus", "final": "Box C", "raw": "{\"final\": \"Box C\"}"}
+{"id": "di-011", "model": "sonnet_tgt", "final": "Box C", "raw": "```json\n{\n  \"final\": \"Box C\"\n}\n```"}
+{"id": "di-011", "model": "haiku", "final": "Box C is the lightest.", "raw": "```json\n{\n  \"final\": \"Box C is the lightest.\"\n}\n```"}
+{"id": "di-012", "model": "opus", "final": "9:30 PM", "raw": "```json\n{\"final\": \"9:30 PM\"}\n```"}
+{"id": "di-012", "model": "sonnet_tgt", "final": "9:30 PM", "raw": "```json\n{\n  \"final\": \"9:30 PM\"\n}\n```"}
+{"id": "di-012", "model": "haiku", "final": "9:30 PM", "raw": "```json\n{\n  \"final\": \"9:30 PM\"\n}\n```"}
+{"id": "di-013", "model": "opus", "final": "2", "raw": "{\"final\": \"2\"}"}
+{"id": "di-013", "model": "sonnet_tgt", "final": "2", "raw": "```json\n{\n  \"final\": 2\n}\n```"}
+{"id": "di-013", "model": "haiku", "final": "2", "raw": "```json\n{\n  \"final\": 2\n}\n```"}
+{"id": "di-014", "model": "opus", "final": "Plant C", "raw": "```json\n{\"final\": \"Plant C\"}\n```"}
+{"id": "di-014", "model": "sonnet_tgt", "final": "Plant C", "raw": "```json\n{\n  \"final\": \"Plant C\"\n}\n```"}
+{"id": "di-014", "model": "haiku", "final": "Plant C", "raw": "Looking at the logical relationships provided:\n\n- Plant A needs more water than Plant B\n- Plant B needs more water than Plant C\n\nThis establishes a clear hierarchy: A > B > C\n\nTherefore, Plant C needs the least water.\n\n```json\n{\n  \"final\": \"Plant C\"\n}\n```"}
+{"id": "di-015", "model": "opus", "final": "6 AM", "raw": "{\"final\": \"6 AM\"}"}
+{"id": "di-015", "model": "sonnet_tgt", "final": "6 AM", "raw": "```json\n{\n  \"final\": \"6 AM\"\n}\n```"}
+{"id": "di-015", "model": "haiku", "final": "The bakery opens at 6 AM.", "raw": "```json\n{\n  \"final\": \"The bakery opens at 6 AM.\"\n}\n```"}
+{"id": "di-016", "model": "opus", "final": "Mountain A", "raw": "```json\n{\"final\": \"Mountain A\"}\n```"}
+{"id": "di-016", "model": "sonnet_tgt", "final": "Mountain A", "raw": "```json\n{\n  \"final\": \"Mountain A\"\n}\n```"}
+{"id": "di-016", "model": "haiku", "final": "Mountain A is the tallest.", "raw": "```json\n{\n  \"final\": \"Mountain A is the tallest.\"\n}\n```"}
+{"id": "di-017", "model": "opus", "final": "5", "raw": "{\"final\": 5}"}
+{"id": "di-017", "model": "sonnet_tgt", "final": "5", "raw": "```json\n{\n  \"final\": 5\n}\n```"}
+{"id": "di-017", "model": "haiku", "final": "5", "raw": "```json\n{\n  \"final\": 5\n}\n```"}
+{"id": "di-018", "model": "opus", "final": "2:00 PM", "raw": "{\"final\": \"2:00 PM\"}"}
+{"id": "di-018", "model": "sonnet_tgt", "final": "2:00 PM", "raw": "```json\n{\n  \"final\": \"2:00 PM\"\n}\n```"}
+{"id": "di-018", "model": "haiku", "final": "2:00 PM", "raw": "```json\n{\n  \"final\": \"2:00 PM\"\n}\n```"}
+{"id": "di-019", "model": "opus", "final": "River C", "raw": "{\"final\": \"River C\"}"}
+{"id": "di-019", "model": "sonnet_tgt", "final": "River C", "raw": "```json\n{\n  \"final\": \"River C\"\n}\n```"}
+{"id": "di-019", "model": "haiku", "final": "River C", "raw": "```json\n{\n  \"final\": \"River C\"\n}\n```"}
+{"id": "di-020", "model": "opus", "final": "Team A", "raw": "```json\n{\"final\": \"Team A\"}\n```"}
+{"id": "di-020", "model": "sonnet_tgt", "final": "Team A", "raw": "```json\n{\n  \"final\": \"Team A\"\n}\n```"}
+{"id": "di-020", "model": "haiku", "final": "Team A won. The first statement explicitly says 'Team A scored more points than Team B,' and scoring more points is how a team wins a game.", "raw": "```json\n{\n  \"final\": \"Team A won. The first statement explicitly says 'Team A scored more points than Team B,' and scoring more points is how a team wins a game.\"\n}\n```"}
+{"id": "di-021", "model": "opus", "final": "C7", "raw": "```json\n{\"final\": \"C7\"}\n```"}
+{"id": "di-021", "model": "sonnet_tgt", "final": "C7", "raw": "```json\n{\n  \"final\": \"C7\"\n}\n```"}
+{"id": "di-021", "model": "haiku", "final": "Gate C7", "raw": "```json\n{\n  \"final\": \"Gate C7\"\n}\n```"}
+{"id": "di-022", "model": "opus", "final": "Recipe C", "raw": "{\"final\": \"Recipe C\"}"}
+{"id": "di-022", "model": "sonnet_tgt", "final": "Recipe C", "raw": "```json\n{\n  \"final\": \"Recipe C\"\n}\n```"}
+{"id": "di-022", "model": "haiku", "final": "Recipe C is the quickest to make.", "raw": "```json\n{\n  \"final\": \"Recipe C is the quickest to make.\"\n}\n```"}
+{"id": "di-023", "model": "opus", "final": "No, the museum is not open on Monday. The museum is open Tuesday through Sunday, which means it is closed on Monday.", "raw": "{\"final\": \"No, the museum is not open on Monday. The museum is open Tuesday through Sunday, which means it is closed on Monday.\"}"}
+{"id": "di-023", "model": "sonnet_tgt", "final": "No", "raw": "```json\n{\n  \"final\": \"No\"\n}\n```"}
+{"id": "di-023", "model": "haiku", "final": "No, the museum is not open on Monday. According to the information provided, the museum is open Tuesday through Sunday, which means it is closed on Mondays.", "raw": "```json\n{\n  \"final\": \"No, the museum is not open on Monday. According to the information provided, the museum is open Tuesday through Sunday, which means it is closed on Mondays.\"\n}\n```"}
+{"id": "di-024", "model": "opus", "final": "House C", "raw": "{\"final\": \"House C\"}"}
+{"id": "di-024", "model": "sonnet_tgt", "final": "House C", "raw": "```json\n{\n  \"final\": \"House C\"\n}\n```"}
+{"id": "di-024", "model": "haiku", "final": "House C costs the least.", "raw": "```json\n{\n  \"final\": \"House C costs the least.\"\n}\n```"}
+{"id": "di-025", "model": "opus", "final": "8 PM", "raw": "{\"final\": \"8 PM\"}"}
+{"id": "di-025", "model": "sonnet_tgt", "final": "8 PM", "raw": "```json\n{\n  \"final\": \"8 PM\"\n}\n```"}
+{"id": "di-025", "model": "haiku", "final": "8 PM", "raw": "```json\n{\n  \"final\": \"8 PM\"\n}\n```"}
+{"id": "di-026", "model": "opus", "final": "Student A", "raw": "```json\n{\"final\": \"Student A\"}\n```"}
+{"id": "di-026", "model": "sonnet_tgt", "final": "Student A", "raw": "```json\n{\n  \"final\": \"Student A\"\n}\n```"}
+{"id": "di-026", "model": "haiku", "final": "Student A scored higher than Student B on the test.", "raw": "```json\n{\n  \"final\": \"Student A scored higher than Student B on the test.\"\n}\n```"}
+{"id": "di-027", "model": "opus", "final": "200", "raw": "```json\n{\"final\": 200}\n```"}
+{"id": "di-027", "model": "sonnet_tgt", "final": "200", "raw": "```json\n{\n  \"final\": 200\n}\n```"}
+{"id": "di-027", "model": "haiku", "final": "200", "raw": "```json\n{\n  \"final\": 200\n}\n```"}
+{"id": "di-028", "model": "opus", "final": "Lake C", "raw": "{\"final\": \"Lake C\"}"}
+{"id": "di-028", "model": "sonnet_tgt", "final": "Lake C", "raw": "```json\n{\n  \"final\": \"Lake C\"\n}\n```"}
+{"id": "di-028", "model": "haiku", "final": "Lake C is the shallowest.", "raw": "```json\n{\n  \"final\": \"Lake C is the shallowest.\"\n}\n```"}
+{"id": "di-029", "model": "opus", "final": "Every 15 minutes", "raw": "{\"final\": \"Every 15 minutes\"}"}
+{"id": "di-029", "model": "sonnet_tgt", "final": "Every 15 minutes", "raw": "```json\n{\n  \"final\": \"Every 15 minutes\"\n}\n```"}
+{"id": "di-029", "model": "haiku", "final": "The bus arrives every 15 minutes.", "raw": "```json\n{\n  \"final\": \"The bus arrives every 15 minutes.\"\n}\n```"}
+{"id": "di-030", "model": "opus", "final": "Tree C", "raw": "{\"final\": \"Tree C\"}"}
+{"id": "di-030", "model": "sonnet_tgt", "final": "Tree C", "raw": "```json\n{\n  \"final\": \"Tree C\"\n}\n```"}
+{"id": "di-030", "model": "haiku", "final": "Tree C", "raw": "Looking at this logical reasoning problem, I need to work through the age relationships:\n\n1. Tree A is older than Tree B\n2. Tree B is older than Tree C\n3. Therefore: A > B > C (in terms of age)\n\nThis means Tree C is the youngest.\n\n```json\n{\n  \"final\": \"Tree C\"\n}\n```"}

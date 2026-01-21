@@ -1,0 +1,30 @@
+{
+  "proposer": {
+    "model": "sonnet",
+    "temperature": 0.0
+  },
+  "targets": [
+    {
+      "name": "opus",
+      "model": "opus",
+      "temperature": 0.0
+    },
+    {
+      "name": "sonnet_tgt",
+      "model": "sonnet",
+      "temperature": 0.0
+    },
+    {
+      "name": "haiku",
+      "model": "haiku",
+      "temperature": 0.0
+    }
+  ],
+  "families": [
+    "commonsense",
+    "causal",
+    "distractor",
+    "explanation"
+  ],
+  "corruption_k_per_family": 8
+}

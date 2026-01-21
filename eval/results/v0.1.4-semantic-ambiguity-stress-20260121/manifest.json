@@ -1,0 +1,22 @@
+{
+  "run_name": "v0.1.4-semantic-ambiguity-stress-20260121",
+  "created_utc": "20260121T204001Z",
+  "git": {
+    "commit": "6e242bedea4d",
+    "tag": "6e242be"
+  },
+  "experiment": "semantic-ambiguity-stress",
+  "axis": "task_verifiability",
+  "families": [
+    "commonsense",
+    "causal",
+    "distractor",
+    "explanation"
+  ],
+  "conditions": [
+    "no_trace",
+    "uncorrupted_trace",
+    "corrupted_trace"
+  ],
+  "notes": "Semantic stress test: commonsense, causal, distractor, explanation tasks."
+}
