@@ -17,5 +17,6 @@
     "no_trace",
     "uncorrupted_trace",
     "corrupted_trace"
-  ]
+  ],
+  "closure_tag": "v0.1.5-exp006-closed"
 }

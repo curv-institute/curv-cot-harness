@@ -93,3 +93,11 @@ Mean corruption-follow rate per model (across seeds):
 
 **Most sensitive:** opus (0.0778)
 **Least sensitive:** sonnet_tgt (0.0111)
+
+## Closure Status
+
+- Agreement-on-wrong does not replicate across seeds.
+- Corruption-follow rate remains low and non-scaling.
+- Plurality-wrong does not increase under amplified corruption.
+- Stop condition satisfied.
+- No harmonization, selection, or verification layers introduced.
