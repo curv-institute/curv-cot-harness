@@ -1,0 +1,3 @@
+opus: opus
+sonnet_tgt: sonnet
+haiku: haiku

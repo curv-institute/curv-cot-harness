@@ -1,0 +1,54 @@
+{
+  "seed": 3,
+  "n_items": 30,
+  "n_corrupted": 30,
+  "agreement_rate": {
+    "no_trace": 0.01111111111111111,
+    "uncorrupted_trace": 0.01111111111111111,
+    "corrupted_trace": 0.06666666666666667
+  },
+  "agree_all_counts": {
+    "no_trace": {
+      "correct": 0,
+      "wrong": 0
+    },
+    "uncorrupted_trace": {
+      "correct": 0,
+      "wrong": 0
+    },
+    "corrupted_trace": {
+      "correct": 0,
+      "wrong": 1
+    }
+  },
+  "plurality_wrong": {
+    "no_trace": 27,
+    "uncorrupted_trace": 27,
+    "corrupted_trace": 26
+  },
+  "accuracy": {
+    "no_trace": {
+      "opus": 0.1,
+      "sonnet_tgt": 0.06666666666666667,
+      "haiku": 0.03333333333333333
+    },
+    "uncorrupted_trace": {
+      "opus": 0.1,
+      "sonnet_tgt": 0.2,
+      "haiku": 0.13333333333333333
+    },
+    "corrupted_trace": {
+      "opus": 0.1,
+      "sonnet_tgt": 0.26666666666666666,
+      "haiku": 0.06666666666666667
+    }
+  },
+  "corruption_metrics": {
+    "follow_rate_per_model": {
+      "opus": 0.1,
+      "sonnet_tgt": 0.03333333333333333,
+      "haiku": 0.0
+    },
+    "total_follow_events": 4
+  }
+}

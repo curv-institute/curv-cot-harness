@@ -1,0 +1,21 @@
+{
+  "run_name": "v0.1.5-causal-replication-amplified-20260212",
+  "created_utc": "20260213T173145Z",
+  "git": {
+    "commit": "44eb7f8ca424",
+    "tag": "44eb7f8"
+  },
+  "experiment": "causal-replication-amplified",
+  "axis": "corruption_coverage_seed_variation",
+  "dataset": "exp005_causal.jsonl",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "conditions": [
+    "no_trace",
+    "uncorrupted_trace",
+    "corrupted_trace"
+  ]
+}

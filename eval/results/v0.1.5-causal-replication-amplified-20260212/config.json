@@ -1,0 +1,31 @@
+{
+  "proposer": {
+    "model": "sonnet",
+    "temperature": 0.0
+  },
+  "targets": [
+    {
+      "name": "opus",
+      "model": "opus",
+      "temperature": 0.0
+    },
+    {
+      "name": "sonnet_tgt",
+      "model": "sonnet",
+      "temperature": 0.0
+    },
+    {
+      "name": "haiku",
+      "model": "haiku",
+      "temperature": 0.0
+    }
+  ],
+  "dataset": "exp005_causal.jsonl",
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "corruption_k": 30,
+  "corruption_protocol": "All 30 items corrupted per seed. Seed affects alternative selection and trace modification strategy."
+}
