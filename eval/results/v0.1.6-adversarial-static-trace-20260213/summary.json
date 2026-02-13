@@ -1,0 +1,74 @@
+{
+  "run_name": "v0.1.6-adversarial-static-trace-20260213",
+  "n_items": 60,
+  "n_corrupted": 30,
+  "agreement_rate": {
+    "no_trace": 0.11666666666666667,
+    "uncorrupted_trace": 0.2,
+    "corrupted_trace": 0.20555555555555557
+  },
+  "agree_all_counts": {
+    "no_trace": {
+      "correct": 2,
+      "wrong": 1
+    },
+    "uncorrupted_trace": {
+      "correct": 7,
+      "wrong": 3
+    },
+    "corrupted_trace": {
+      "correct": 6,
+      "wrong": 4
+    }
+  },
+  "plurality_wrong": {
+    "no_trace": 45,
+    "uncorrupted_trace": 47,
+    "corrupted_trace": 46
+  },
+  "accuracy": {
+    "no_trace": {
+      "opus": 0.23333333333333334,
+      "sonnet_tgt": 0.25,
+      "haiku": 0.2
+    },
+    "uncorrupted_trace": {
+      "opus": 0.21666666666666667,
+      "sonnet_tgt": 0.21666666666666667,
+      "haiku": 0.2
+    },
+    "corrupted_trace": {
+      "opus": 0.25,
+      "sonnet_tgt": 0.2,
+      "haiku": 0.18333333333333332
+    }
+  },
+  "trap_follow_rate": {
+    "no_trace": {
+      "opus": 0.05,
+      "sonnet_tgt": 0.03333333333333333,
+      "haiku": 0.06666666666666667
+    },
+    "uncorrupted_trace": {
+      "opus": 0.03333333333333333,
+      "sonnet_tgt": 0.016666666666666666,
+      "haiku": 0.03333333333333333
+    },
+    "corrupted_trace": {
+      "opus": 0.016666666666666666,
+      "sonnet_tgt": 0.016666666666666666,
+      "haiku": 0.06666666666666667
+    }
+  },
+  "trap_consensus": {
+    "no_trace": 3,
+    "uncorrupted_trace": 2,
+    "corrupted_trace": 1
+  },
+  "disagreement_suppression": {
+    "count": 2,
+    "avg_diversity_no_trace": 2.7,
+    "avg_diversity_uncorrupted": 2.566666666666667,
+    "avg_diversity_corrupted": 2.55
+  }
+}

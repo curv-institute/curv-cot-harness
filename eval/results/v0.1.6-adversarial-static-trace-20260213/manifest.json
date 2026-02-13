@@ -1,0 +1,16 @@
+{
+  "run_name": "v0.1.6-adversarial-static-trace-20260213",
+  "created_utc": "20260213T192607Z",
+  "git": {
+    "commit": "2d4bc6b57337",
+    "tag": "v0.1.5-exp006-closed"
+  },
+  "experiment": "adversarial-static-trace",
+  "axis": "task_adversariality",
+  "dataset": "exp007_adversarial.jsonl",
+  "conditions": [
+    "no_trace",
+    "uncorrupted_trace",
+    "corrupted_trace"
+  ]
+}

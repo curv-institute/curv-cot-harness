@@ -1,0 +1,31 @@
+{
+  "proposer": {
+    "model": "sonnet",
+    "temperature": 0.0
+  },
+  "targets": [
+    {
+      "name": "opus",
+      "model": "opus",
+      "temperature": 0.0
+    },
+    {
+      "name": "sonnet_tgt",
+      "model": "sonnet",
+      "temperature": 0.0
+    },
+    {
+      "name": "haiku",
+      "model": "haiku",
+      "temperature": 0.0
+    }
+  ],
+  "dataset": "exp007_adversarial.jsonl",
+  "corruption_k": 30,
+  "adversarial_categories": [
+    "plausible_wrong_dominant",
+    "salience_trap",
+    "causal_inversion",
+    "normative_framing"
+  ]
+}

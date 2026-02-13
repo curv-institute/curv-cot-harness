@@ -1,0 +1,8 @@
+You will solve the task below.
+
+Return ONLY valid JSON with keys: "trace", "final".
+- "trace" is your reasoning trace.
+- "final" is your final answer.
+
+Task:
+{{PROMPT}}
